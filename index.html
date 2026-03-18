@@ -4,212 +4,76 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Marti_nPizza | Neapolitan Style Pizza Catering</title>
-
     <meta property="og:title" content="Marti_nPizza | Neapolitan Style Pizza Catering">
     <meta property="og:description" content="Authentic 48-hour fermented Neapolitan pizza catering for weddings and events across Scotland.">
     <meta property="og:image" content="https://martinpizza.co.uk/pizza-1.jpg">
     <meta property="og:url" content="https://martinpizza.co.uk">
     <meta property="og:type" content="website">
-    
     <meta name="twitter:card" content="summary_large_image">
-    <meta name="twitter:title" content="Marti_nPizza | Neapolitan Style Pizza Catering">
-    <meta name="twitter:description" content="Authentic 48-hour fermented Neapolitan pizza catering across Scotland.">
     <meta name="twitter:image" content="https://martinpizza.co.uk/pizza-1.jpg">
-
     <style>
-        :root {
-            --bg-color: #000000;
-            --text-color: #ffffff;
-            --accent-color: #fffd82; 
-            --form-bg: #111111;
-            --font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
-        }
-
-        body {
-            margin: 0;
-            font-family: var(--font-family);
-            background-color: var(--bg-color);
-            color: var(--text-color);
-            scroll-behavior: smooth;
-            -webkit-font-smoothing: antialiased;
-        }
-
-        a { text-decoration: none; color: inherit; transition: color 0.3s; }
-        
-        header {
-            background-color: rgba(0, 0, 0, 0.95);
-            position: fixed;
-            top: 0;
-            width: 100%;
-            display: flex;
-            justify-content: space-between;
-            align-items: center;
-            padding: 1rem 5%;
-            box-sizing: border-box;
-            z-index: 1000;
-            border-bottom: 1px solid rgba(255, 255, 255, 0.1);
-        }
-
-        .logo { font-size: 1.3rem; font-weight: bold; white-space: nowrap; }
-        .logo span { color: var(--accent-color); }
-
-        nav ul { list-style: none; display: flex; gap: 1.5rem; margin: 0; padding: 0; font-size: 0.9rem; }
-
-        #home {
-            min-height: 100vh;
-            display: flex;
-            flex-direction: column;
-            justify-content: center;
-            align-items: center;
-            text-align: center;
-            background-image: linear-gradient(to bottom, rgba(0,0,0,0.3), rgba(0,0,0,0.8)), url('hero-trailer.jpg'); 
-            background-size: cover;
-            background-position: center;
-            padding: 80px 10% 40px 10%;
-            box-sizing: border-box;
-        }
-
-        #home h1 { font-size: clamp(2.5rem, 8vw, 4rem); margin-bottom: 0.5rem; line-height: 1.1; }
-        #home h1 span { color: var(--accent-color); }
-        #home p { font-size: clamp(1.1rem, 4vw, 1.5rem); margin-bottom: 2rem; }
-
-        .btn-main {
-            background-color: var(--accent-color);
-            color: var(--bg-color);
-            padding: 1rem 2rem;
-            border-radius: 50px;
-            font-weight: bold;
-            font-size: 1rem;
-            display: inline-block;
-        }
-
-        .stats-bar {
-            background-color: var(--accent-color);
-            color: #000;
-            display: grid;
-            grid-template-columns: repeat(2, 1fr);
-            padding: 2rem 5%;
-            text-align: center;
-            gap: 20px;
-        }
-        @media (min-width: 768px) {
-            .stats-bar { grid-template-columns: repeat(4, 1fr); }
-        }
-        .stat-item h3 { margin: 0; font-size: 1.4rem; }
-        .stat-item p { margin: 2px 0 0; font-weight: bold; text-transform: uppercase; font-size: 0.7rem; letter-spacing: 1px; }
-
-        section { padding: 80px 8%; width: 100%; box-sizing: border-box; clear: both; }
-        section h2 { font-size: clamp(2rem, 6vw, 3rem); text-align: center; margin-bottom: 1.5rem; }
-        section h2::after { content: ''; display: block; width: 60px; height: 3px; background-color: var(--accent-color); margin: 0.8rem auto; }
-
-        .dietary-note { text-align: center; max-width: 600px; margin: 0 auto 3rem auto; color: rgba(255,255,255,0.7); font-style: italic; font-size: 0.95rem; }
-        .dietary-note span { color: var(--accent-color); font-weight: bold; }
-
-        .process-container {
-            display: grid;
-            grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
-            gap: 2rem;
-        }
-        .process-text h3 { color: var(--accent-color); font-size: 1.5rem; margin-top: 0; }
-        .process-text p { line-height: 1.6; color: rgba(255,255,255,0.8); font-size: 1rem; }
-
-        .menu-grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(260px, 1fr)); gap: 1.5rem; }
-        .menu-item { background: #111; padding: 1.5rem; border-radius: 10px; border: 1px solid rgba(255,255,255,0.1); }
-        .menu-item h3 { color: var(--accent-color); margin: 0 0 10px 0; font-size: 1.3rem; }
-        .menu-item p { margin: 0; font-size: 0.95rem; line-height: 1.4; }
-
-        .gallery-grid { display: grid; grid-template-columns: repeat(2, 1fr); gap: 10px; }
-        @media (min-width: 768px) { .gallery-grid { grid-template-columns: repeat(4, 1fr); } }
-        .gallery-grid img { width: 100%; height: 180px; object-fit: cover; border-radius: 8px; }
-
-        #hire-us { max-width: 600px; margin: 0 auto; }
-        form { background-color: var(--form-bg); padding: 2rem; border-radius: 10px; display: flex; flex-direction: column; gap: 1.2rem; }
-        .form-group { display: flex; flex-direction: column; }
-        label { margin-bottom: 6px; color: var(--accent-color); font-weight: bold; font-size: 0.9rem; }
-        input, select, textarea { 
-            padding: 12px; 
-            background-color: rgba(255,255,255,0.08); 
-            border: 1px solid rgba(255,255,255,0.15); 
-            border-radius: 6px; 
-            color: white; 
-            width: 100%; 
-            box-sizing: border-box; 
-            font-size: 16px;
-        }
-        .btn-submit { background-color: var(--accent-color); color: #000; padding: 16px; border: none; border-radius: 6px; font-weight: bold; font-size: 1.1rem; cursor: pointer; }
-
-        footer { background-color: #080808; text-align: center; padding: 40px 5%; border-top: 1px solid rgba(255,255,255,0.1); }
-        .social-links { display: flex; justify-content: center; gap: 25px; margin-bottom: 20px; }
-        .social-links a svg { width: 30px; height: 30px; fill: #ffffff; }
-        
-        .footer-contact p { margin: 8px 0; font-size: 1rem; }
-        .footer-contact a { color: var(--accent-color); font-weight: bold; }
-
-        @media (max-width: 600px) {
-            header { padding: 1rem 3%; }
-            nav ul { gap: 0.8rem; font-size: 0.8rem; }
-            section { padding: 50px 5%; }
-            .gallery-grid img { height: 140px; }
-        }
+        :root { --gold: #fffd82; --bg: #000; --f-bg: #111; }
+        body { margin: 0; font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif; background: var(--bg); color: #fff; scroll-behavior: smooth; -webkit-font-smoothing: antialiased; }
+        a { text-decoration: none; color: inherit; transition: 0.3s; }
+        header { background: rgba(0,0,0,0.95); position: fixed; top: 0; width: 100%; display: flex; justify-content: space-between; align-items: center; padding: 1rem 5%; box-sizing: border-box; z-index: 1000; border-bottom: 1px solid rgba(255,255,255,0.1); }
+        .logo { font-size: 1.3rem; font-weight: bold; } .logo span { color: var(--gold); }
+        nav ul { list-style: none; display: flex; gap: 1.5rem; margin: 0; padding: 0; font-size: 0.85rem; }
+        #home { min-height: 100vh; display: flex; flex-direction: column; justify-content: center; align-items: center; text-align: center; background: linear-gradient(rgba(0,0,0,0.3), rgba(0,0,0,0.8)), url('hero-trailer.jpg') center/cover; padding: 80px 10%; box-sizing: border-box; }
+        #home h1 { font-size: clamp(2.5rem, 8vw, 4rem); margin: 0; line-height: 1.1; } #home h1 span { color: var(--gold); }
+        .btn { background: var(--gold); color: #000; padding: 1rem 2rem; border-radius: 50px; font-weight: bold; margin-top: 25px; display: inline-block; }
+        .stats { background: var(--gold); color: #000; display: grid; grid-template-columns: repeat(2, 1fr); padding: 2rem 5%; text-align: center; gap: 20px; }
+        @media (min-width: 768px) { .stats { grid-template-columns: repeat(4, 1fr); } }
+        .stat h3 { margin: 0; font-size: 1.3rem; } .stat p { margin: 0; font-size: 0.7rem; font-weight: bold; text-transform: uppercase; letter-spacing: 1px; }
+        section { padding: 80px 8%; box-sizing: border-box; clear: both; }
+        section h2 { font-size: clamp(2rem, 6vw, 2.5rem); text-align: center; margin-bottom: 1.5rem; } section h2::after { content: ''; display: block; width: 50px; height: 3px; background: var(--gold); margin: 10px auto; }
+        .menu-grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(250px, 1fr)); gap: 1.5rem; }
+        .menu-item { background: var(--f-bg); padding: 1.5rem; border-radius: 10px; border: 1px solid rgba(255,255,255,0.1); }
+        .menu-item h3 { color: var(--gold); margin: 0 0 10px 0; font-size: 1.3rem; }
+        .gallery { display: grid; grid-template-columns: repeat(2, 1fr); gap: 10px; }
+        @media (min-width: 768px) { .gallery { grid-template-columns: repeat(4, 1fr); } }
+        .gallery img { width: 100%; height: 180px; object-fit: cover; border-radius: 8px; }
+        #hire { max-width: 600px; margin: 0 auto; }
+        form { background: var(--f-bg); padding: 2rem; border-radius: 10px; display: flex; flex-direction: column; gap: 1.2rem; }
+        input, select, textarea { padding: 12px; background: rgba(255,255,255,0.08); border: 1px solid rgba(255,255,255,0.15); border-radius: 6px; color: #fff; width: 100%; box-sizing: border-box; font-size: 16px; }
+        .submit { background: var(--gold); color: #000; padding: 16px; border: none; border-radius: 6px; font-weight: bold; font-size: 1.1rem; cursor: pointer; }
+        footer { background: #080808; text-align: center; padding: 40px 5%; border-top: 1px solid rgba(255,255,255,0.1); }
+        .social { display: flex; justify-content: center; gap: 25px; margin-bottom: 20px; } .social svg { width: 30px; height: 30px; fill: #fff; }
+        .contact p { margin: 8px 0; } .contact a { color: var(--gold); font-weight: bold; }
     </style>
 </head>
 <body>
-
     <header>
         <div class="logo"><span>Marti</span>_nPizza</div>
-        <nav>
-            <ul>
-                <li><a href="#menu">Menu</a></li>
-                <li><a href="#gallery">Gallery</a></li>
-                <li><a href="#hire-us">Hire</a></li>
-            </ul>
-        </nav>
+        <nav><ul><li><a href="#menu">Menu</a></li><li><a href="#gallery">Gallery</a></li><li><a href="#hire">Hire</a></li></ul></nav>
     </header>
 
     <section id="home">
         <h1>A <span>Slice</span> of Heaven.</h1>
         <p>Authentic Neapolitan Style Pizza Catering</p>
-        <a href="#hire-us" class="btn-main">Get a Quote</a>
+        <a href="#hire" class="btn">Get a Quote</a>
     </section>
 
-    <div class="stats-bar">
-        <div class="stat-item"><h3>10-200</h3><p>Guests</p></div>
-        <div class="stat-item"><h3>450-500°C</h3><p>Heat</p></div>
-        <div class="stat-item"><h3>Bathgate</h3><p>Location</p></div>
-        <div class="stat-item"><h3>Scotland</h3><p>Nationwide</p></div>
+    <div class="stats">
+        <div class="stat"><h3>10-200</h3><p>Guests</p></div>
+        <div class="stat"><h3>450-500°C</h3><p>Heat</p></div>
+        <div class="stat"><h3>Bathgate</h3><p>Location</p></div>
+        <div class="stat"><h3>Scotland</h3><p>Nationwide</p></div>
     </div>
-
-    <section id="process">
-        <h2>The Dough</h2>
-        <div class="process-container">
-            <div class="process-text">
-                <h3>The Secret is Patience</h3>
-                <p>Made in-house using premium flour, sea salt, water, and fresh yeast. We slow-ferment for 24-48 hours for a light, digestible crust.</p>
-            </div>
-            <div class="process-text">
-                <h3>Stone-Baked Perfection</h3>
-                <p>Baked at 450-500°C for that authentic Neapolitan leopard spotting, ready in under 90 seconds.</p>
-            </div>
-        </div>
-    </section>
 
     <section id="menu">
         <h2>Sample Menu</h2>
-        <p class="dietary-note">All pizzas can be tailored to meet <span>Vegan</span>, <span>Vegetarian</span>, or <span>Gluten-Free</span> requirements.</p>
         <div class="menu-grid">
-            <div class="menu-item"><h3>The Classic Margherita</h3><p>San Marzano D.O.P Tomatoes, Fresh Fior di Latte, Olive Oil, and Basil.</p></div>
+            <div class="menu-item"><h3>Margherita</h3><p>San Marzano Tomatoes, Fresh Fior di Latte, Olive Oil, and Basil.</p></div>
             <div class="menu-item"><h3>Pepperoni</h3><p>Tomato Base, Fresh Mozzarella, and Premium Spicy Italian Pepperoni.</p></div>
             <div class="menu-item"><h3>Spicy Scotsman</h3><p>Tomato Base, Mozzarella, Haggis, Jalapeños, and Hot Honey.</p></div>
-            <div class="menu-item"><h3>Vegetarian Special</h3><p>Tomato Base, Mozzarella, Mushrooms, Olives, and Onions.</p></div>
             <div class="menu-item"><h3>Pizza Bianca</h3><p>White base of Extra Virgin Olive Oil, Fresh Garlic, and Mozzarella.</p></div>
-            <div class="menu-item"><h3>Ham and Mushrooms</h3><p>Tomato Base, Mozzarella, Cured Italian Ham, and Mushrooms.</p></div>
         </div>
     </section>
 
     <section id="gallery">
         <h2>Gallery</h2>
-        <div class="gallery-grid">
-            <img src="hero-trailer.jpg" alt="Marti_nPizza Catering Trailer">
+        <div class="gallery">
+            <img src="hero-trailer.jpg" alt="Trailer">
             <img src="setup-1.jpg" alt="Setup 1">
             <img src="setup-2.jpg" alt="Setup 2">
             <img src="setup-3.jpg" alt="Setup 3">
@@ -220,40 +84,28 @@
         </div>
     </section>
 
-    <section id="hire-us">
+    <section id="hire">
         <h2>Hire Us</h2>
-        <form name="contact" method="POST" data-netlify="true">
-            <div class="form-group"><label for="name">Your Name</label><input type="text" name="name" id="name" required></div>
-            <div class="form-group"><label for="email">Your Email</label><input type="email" name="email" id="email" required></div>
-            <div class="form-group"><label for="phone">Phone Number</label><input type="tel" name="phone" id="phone" placeholder="07846547293" required></div>
-            <div class="form-group"><label for="event_date">Date of Event</label><input type="date" name="event_date" id="event_date" required></div>
-            <div class="form-group"><label for="event_type">Event Type</label>
-                <select name="event_type" id="event_type" required>
-                    <option value="" disabled selected>Select...</option>
-                    <option value="Wedding">Wedding</option>
-                    <option value="Birthday">Birthday</option>
-                    <option value="Corporate">Corporate</option>
-                    <option value="Other">Other</option>
-                </select>
-            </div>
-            <div class="form-group"><label for="guests">Expected Guests</label><input type="number" name="guests" id="guests" placeholder="80" required></div>
-            <div class="form-group"><label for="message">Details</label><textarea name="message" id="message" placeholder="Location and requests..."></textarea></div>
-            <button type="submit" class="btn-submit">Submit Inquiry</button>
+        <form action="https://formspree.io/f/mdawybko" method="POST">
+            <input type="text" name="name" placeholder="Your Name" required>
+            <input type="email" name="email" placeholder="Your Email" required>
+            <input type="tel" name="phone" placeholder="Phone Number" required>
+            <input type="date" name="event_date" required>
+            <input type="number" name="guests" placeholder="Expected Guests" required>
+            <textarea name="message" placeholder="Event Location & Details..." rows="4"></textarea>
+            <button type="submit" class="submit">Submit Inquiry</button>
         </form>
     </section>
 
     <footer>
-        <div class="social-links">
-            <a href="https://www.facebook.com/Martinpizzza/" target="_blank"><svg viewBox="0 0 24 24"><path d="M22.675 0h-21.35c-.732 0-1.325.593-1.325 1.325v21.351c0 .731.593 1.324 1.325 1.324h11.495v-9.294h-3.128v-3.622h3.128v-2.671c0-3.1 1.893-4.788 4.659-4.788 1.325 0 2.463.099 2.795.143v3.24l-1.918.001c-1.504 0-1.795.715-1.795 1.763v2.313h3.587l-.467 3.622h-3.12v9.293h6.116c.73 0 1.323-.593 1.323-1.325v-21.35c0-.732-.593-1.325-1.323-1.325z"/></svg></a> 
-            <a href="https://www.instagram.com/marti_npizza" target="_blank"><svg viewBox="0 0 24 24"><path d="M12 2.163c3.204 0 3.584.012 4.85.07 3.252.148 4.771 1.691 4.919 4.919.058 1.265.069 1.645.069 4.849 0 3.205-.012 3.584-.069 4.849-.149 3.225-1.664 4.771-4.919 4.919-1.266.058-1.644.07-4.85.07-3.204 0-3.584-.012-4.849-.07-3.26-.149-4.771-1.699-4.919-4.92-.058-1.265-.07-1.644-.07-4.849 0-3.204.013-3.583.07-4.849.149-3.227 1.664-4.771 4.919-4.919 1.266-.057 1.645-.069 4.849-.069zm0-2.163c-3.259 0-3.667.014-4.947.072-4.358.2-6.78 2.618-6.98 6.98-.059 1.281-.073 1.689-.073 4.948 0 3.259.014 3.668.072 4.948.2 4.358 2.618 6.78 6.98 6.98 1.281.058 1.689.072 4.948.072 3.259 0 3.668-.014 4.948-.072 4.354-.2 6.782-2.618 6.979-6.98.059-1.28.073-1.689.073-4.948 0-3.259-.014-3.667-.072-4.947-.196-4.354-2.617-6.78-6.979-6.98-1.281-.059-1.69-.073-4.949-.073zm0 5.838c-3.403 0-6.162 2.759-6.162 6.162s2.759 6.163 6.162 6.163 6.162-2.759 6.162-6.163-2.759-6.162-6.162-6.162zm0 10.162c-2.209 0-4-1.79-4-4 0-2.209 1.791-4 4-4s4 1.791 4 4c0 2.21-1.791 4-4 4zm6.406-11.845c-.796 0-1.441.645-1.441 1.44s.645 1.44 1.441 1.44c.795 0 1.439-.645 1.439-1.44s-.644-1.44-1.439-1.44z"/></svg></a> 
-            <a href="https://www.tiktok.com/@marti_npizza" target="_blank"><svg viewBox="0 0 24 24"><path d="M12.525.02c1.31-.02 2.61-.01 3.91-.02.08 1.53.63 3.09 1.75 4.17 1.12 1.11 2.7 1.62 4.24 1.79v4.03c-1.44-.05-2.89-.35-4.2-.97-.57-.26-1.1-.59-1.62-.93-.01 2.92.01 5.84-.02 8.75-.08 1.4-.54 2.79-1.35 3.94-1.31 1.92-3.58 3.17-5.91 3.21-1.43.08-2.86-.31-4.08-1.03-2.02-1.19-3.44-3.37-3.59-5.71-.29-3.37 2.13-6.48 5.4-7.2 1.19-.27 2.48-.12 3.57.44V14.2c-.44-.47-1.01-.81-1.65-.98-1.58-.39-3.41.25-4.24 1.74-.45.82-.55 1.83-.34 2.73.14.83.52 1.62 1.14 2.16.81.72 1.9 1.08 2.97 1.01 1.25-.07 2.42-.68 3.12-1.72.37-.53.55-1.14.59-1.78.01-4.08 0-8.16.01-12.23.01-.01.01-.02.01-.03z"/></svg></a>
+        <div class="social">
+            <a href="https://www.facebook.com/Martinpizzza/" target="_blank"><svg viewBox="0 0 24 24"><path d="M22.675 0h-21.35c-.732 0-1.325.593-1.325 1.325v21.351c0 .731.593 1.324 1.325 1.324h11.495v-9.294h-3.128v-3.622h3.128v-2.671c0-3.1 1.893-4.788 4.659-4.788 1.325 0 2.463.099 2.795.143v3.24l-1.918.001c-1.504 0-1.795.715-1.795 1.763v2.313h3.587l-.467 3.622h-3.12v9.293h6.116c.73 0 1.323-.593 1.323-1.325v-21.35c0-.732-.593-1.325-1.323-1.325z"/></svg></a>
+            <a href="https://www.instagram.com/marti_npizza" target="_blank"><svg viewBox="0 0 24 24"><path d="M12 2.163c3.204 0 3.584.012 4.85.07 3.252.148 4.771 1.691 4.919 4.919.058 1.265.069 1.645.069 4.849 0 3.205-.012 3.584-.069 4.849-.149 3.225-1.664 4.771-4.919 4.919-1.266.058-1.644.07-4.85.07-3.204 0-3.584-.012-4.849-.07-3.26-.149-4.771-1.699-4.919-4.92-.058-1.265-.07-1.644-.07-4.849 0-3.204.013-3.583.07-4.849.149-3.227 1.664-4.771 4.919-4.919 1.266-.057 1.645-.069 4.849-.069zm0-2.163c-3.259 0-3.667.014-4.947.072-4.358.2-6.78 2.618-6.98 6.98-.059 1.281-.073 1.689-.073 4.948 0 3.259.014 3.668.072 4.948.2 4.358 2.618 6.78 6.98 6.98 1.281.058 1.689.072 4.948.072 3.259 0 3.668-.014 4.948-.072 4.354-.2 6.782-2.618 6.979-6.98.059-1.28.073-1.689.073-4.948 0-3.259-.014-3.667-.072-4.947-.196-4.354-2.617-6.78-6.979-6.98-1.281-.059-1.69-.073-4.949-.073zm0 5.838c-3.403 0-6.162 2.759-6.162 6.162s2.759 6.163 6.162 6.163 6.162-2.759 6.162-6.163-2.759-6.162-6.162-6.162zm0 10.162c-2.209 0-4-1.79-4-4 0-2.209 1.791-4 4-4s4 1.791 4 4c0 2.21-1.791 4-4 4zm6.406-11.845c-.796 0-1.441.645-1.441 1.44s.645 1.44 1.441 1.44c.795 0 1.439-.645 1.439-1.44s-.644-1.44-1.439-1.44z"/></svg></a>
         </div>
-        <div class="footer-contact">
-            <p><a href="mailto:info@martinpizza.co.uk">info@martinpizza.co.uk</a></p>
-            <p><a href="tel:07846547293">07846547293</a></p>
+        <div class="contact">
+            <p><a href="mailto:info@martinpizza.co.uk">info@martinpizza.co.uk</a> | 07846547293</p>
         </div>
         <p>&copy; 2026 Marti_nPizza. All rights reserved.</p>
     </footer>
-
 </body>
 </html>
