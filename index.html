@@ -87,7 +87,34 @@
             <img src="pizza-4.jpg" alt="Pizza 4">
         </div>
     </section>
+    <style>
+        .testimonials { background: #0a0a0a; display: grid; grid-template-columns: repeat(auto-fit, minmax(280px, 1fr)); gap: 2rem; }
+        .testimonial-card { background: #111; padding: 2rem; border-radius: 15px; border-left: 4px solid var(--gold); position: relative; }
+        .testimonial-card p { font-style: italic; font-size: 0.95rem; line-height: 1.6; color: #ccc; }
+        .testimonial-card h4 { margin-top: 15px; color: var(--gold); font-size: 1rem; }
+        .stars { color: var(--gold); margin-bottom: 10px; font-size: 0.8rem; }
+    </style>
 
+    <section id="testimonials">
+        <h2>What People Say</h2>
+        <div class="testimonials">
+            <div class="testimonial-card">
+                <div class="stars">★★★★★</div>
+                <p>"Best pizza we've had in a long time! Martin catered our garden party and everyone was raving about the Spicy Scotsman. Professional and delicious."</p>
+                <h4>— Sarah, Bathgate</h4>
+            </div>
+            <div class="testimonial-card">
+                <div class="stars">★★★★★</div>
+                <p>"The trailer looks fantastic and the service was top notch. The dough is clearly high quality. Highly recommend for any event!"</p>
+                <h4>— David, Livingston</h4>
+            </div>
+            <div class="testimonial-card">
+                <div class="stars">★★★★★</div>
+                <p>"Booked for a staff lunch and it was a massive hit. Quick, fresh, and authentic Neapolitan style. We will definitely book again."</p>
+                <h4>— Jennifer, West Calder</h4>
+            </div>
+        </div>
+    </section>
     <section id="hire">
         <h2>Hire Us</h2>
         <form action="https://formspree.io/f/mdawybko" method="POST">
