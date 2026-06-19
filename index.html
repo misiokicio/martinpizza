@@ -14,32 +14,29 @@
     <meta name="google-site-verification" content="m0H3ZujxA8bBpxwsPUO6AQcV49NRKqA1j2LYYng2b9Q" />
     <style>
         @media only screen and (max-width: 767px) {
-  /* 1. Shrink the logo/brand name so it stays on the left */
-  .navbar-brand, .logo, .site-title {
-    font-size: 1.2rem !important; 
-    max-width: 60% !important;
-  }
+          /* 1. Shrink the logo/brand name so it stays on the left */
+          .navbar-brand, .logo, .site-title {
+            font-size: 1.2rem !important; 
+            max-width: 60% !important;
+          }
 
-  /* 2. Give the menu links more room or push them to a new line */
-  .navbar-nav, .menu, .nav-menu {
-    margin-top: 10px !important;
-  }
+          /* 2. Give the menu links more room or push them to a new line */
+          .navbar-nav, .menu, .nav-menu {
+            margin-top: 10px !important;
+          }
 
-  /* 3. Add space at the top of the WHOLE page so it doesn't overlap your 'Slice of Heaven' text */
-  body {
-    padding-top: 80px !important; 
-  }
-  
-  /* 4. Ensure the header itself has enough height */
-  header, .site-header, #header {
-    padding: 10px 0 !important;
-    min-height: 60px !important;
-  }
-}
-  
-
-  
-
+          /* 3. Add space at the top of the WHOLE page so it doesn't overlap your 'Slice of Heaven' text */
+          body {
+            padding-top: 80px !important; 
+          }
+          
+          /* 4. Ensure the header itself has enough height */
+          header, .site-header, #header {
+            padding: 10px 0 !important;
+            min-height: 60px !important;
+          }
+        }
+          
         /* Progress Bar */
         .progress-container { position: fixed; top: 0; left: 0; width: 100%; height: 4px; z-index: 1001; }
         .progress-bar { height: 4px; background: var(--gold); width: 0%; box-shadow: 0 0 10px var(--gold); }
@@ -49,7 +46,48 @@
         header { background: rgba(0,0,0,0.95); position: fixed; top: 0; width: 100%; display: flex; justify-content: space-between; align-items: center; padding: 1rem 5%; box-sizing: border-box; z-index: 1000; border-bottom: 1px solid rgba(255,255,255,0.1); }
         .logo { font-size: 1.3rem; font-weight: bold; } .logo span { color: var(--gold); }
         nav ul { list-style: none; display: flex; gap: 1.0rem; margin: 0; padding: 0; font-size: 0.85rem; }
-        #home { min-height: 100vh; display: flex; flex-direction: column; justify-content: center; align-items: center; text-align: center; background: linear-gradient(rgba(0,0,0,0.3), rgba(0,0,0,0.8)), url('hero-trailer.jpg') center/cover; padding: 80px 10%; box-sizing: border-box; }
+        
+        /* Updated #home styles for video handling */
+        #home { 
+            position: relative; 
+            min-height: 100vh; 
+            display: flex; 
+            flex-direction: column; 
+            justify-content: center; 
+            align-items: center; 
+            text-align: center; 
+            background: url('hero-trailer.jpg') center/cover; /* Mobile fallback image */
+            padding: 80px 10%; 
+            box-sizing: border-box; 
+            overflow: hidden; 
+        }
+
+        .bg-video { 
+            position: absolute; 
+            top: 50%; 
+            left: 50%; 
+            width: 100%; 
+            height: 100%; 
+            object-fit: cover; 
+            transform: translate(-50%, -50%); 
+            z-index: 1; 
+        }
+
+        .hero-overlay { 
+            position: absolute; 
+            top: 0; 
+            left: 0; 
+            width: 100%; 
+            height: 100%; 
+            background: linear-gradient(rgba(0,0,0,0.4), rgba(0,0,0,0.85)); /* Tint for clear text */
+            z-index: 2; 
+        }
+
+        .hero-content { 
+            position: relative; 
+            z-index: 3; 
+        }
+
         #home h1 { font-size: clamp(2.5rem, 8vw, 4rem); margin: 0; line-height: 1.1; } #home h1 span { color: var(--gold); }
         .btn { background: var(--gold); color: #000; padding: 1rem 2rem; border-radius: 50px; font-weight: bold; margin-top: 25px; display: inline-block; }
         .stats { background: var(--gold); color: #000; display: grid; grid-template-columns: repeat(2, 1fr); padding: 2rem 5%; text-align: center; gap: 20px; }
@@ -81,9 +119,15 @@
     </header>
 
     <section id="home">
-        <h1>A <span>Slice</span> of Heaven.</h1>
-        <p>Authentic Neapolitan Style Pizza Catering</p>
-        <a href="#hire" class="btn">Check Availability & Pricing</a>
+        <video autoplay loop muted playsinline class="bg-video">
+            <source src="assets/videos/trailerbackground.mp4" type="video/mp4">
+        </video>
+        <div class="hero-overlay"></div>
+        <div class="hero-content">
+            <h1>A <span>Slice</span> of Heaven.</h1>
+            <p>Authentic Neapolitan Style Pizza Catering</p>
+            <a href="#hire" class="btn">Check Availability & Pricing</a>
+        </div>
     </section>
 
     <div class="stats">
@@ -106,6 +150,7 @@
             <div class="menu-item"><h3>BBQ Chicken & Sweetcorn</h3><p>BBQ Base/Tomato Hybrid, Mozzarella, Spicy Chicken, and Sweetcorn.</p></div>
         </div>
     </section>
+
     <style>
         .dough-feature { background: #050505; border-top: 1px solid #222; border-bottom: 1px solid #222; display: flex; align-items: center; flex-wrap: wrap; gap: 40px; padding: 60px 8%; }
         .dough-text { flex: 1; min-width: 300px; }
@@ -114,7 +159,7 @@
         .dough-text p { line-height: 1.8; color: #ccc; font-size: 1.1rem; }
         .dough-highlight { color: var(--gold); font-weight: bold; }
         .dough-image { flex: 1; min-width: 300px; text-align: center; }
-        .dough-image img { width: 100%; max-width: 500px; border-radius: 15px; box-shadow: 0 0 30px rgba(255, 253, 130, 0.1); }
+        .dough-image img { width: 100%; max-width: 500px; border-radius: 15px; box-shadow: 0 0 30px rgba(255, 25, 130, 0.1); }
     </style>
 
     <section id="process" class="dough-feature">
@@ -142,6 +187,7 @@
             <img src="pizza-4.jpg" alt="Pizza 4">
         </div>
     </section>
+
     <style>
         .testimonials { background: #0a0a0a; display: grid; grid-template-columns: repeat(auto-fit, minmax(280px, 1fr)); gap: 2rem; }
         .testimonial-card { background: #111; padding: 2rem; border-radius: 15px; border-left: 4px solid var(--gold); position: relative; }
@@ -170,6 +216,7 @@
             </div>
         </div>
     </section>
+
     <section id="hire">
         <h2>Hire Us</h2>
         <form action="https://formspree.io/f/mdawybko" method="POST">
