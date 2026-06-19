@@ -35,6 +35,11 @@
             padding: 10px 0 !important;
             min-height: 60px !important;
           }
+
+          /* OPTION A: Turn the background video ON for mobile devices only */
+          .bg-video {
+            display: block !important;
+          }
         }
           
         /* Progress Bar */
@@ -47,7 +52,7 @@
         .logo { font-size: 1.3rem; font-weight: bold; } .logo span { color: var(--gold); }
         nav ul { list-style: none; display: flex; gap: 1.0rem; margin: 0; padding: 0; font-size: 0.85rem; }
         
-        /* Updated #home styles for video handling */
+        /* #home Styles */
         #home { 
             position: relative; 
             min-height: 100vh; 
@@ -56,7 +61,7 @@
             justify-content: center; 
             align-items: center; 
             text-align: center; 
-            background: url('hero-trailer.jpg') center/cover; /* Mobile fallback image */
+            background: url('hero-trailer.jpg') center/cover; /* Crisp widescreen image for desktop */
             padding: 80px 10%; 
             box-sizing: border-box; 
             overflow: hidden; 
@@ -71,6 +76,7 @@
             object-fit: cover; 
             transform: translate(-50%, -50%); 
             z-index: 1; 
+            display: none; /* HIDE BY DEFAULT ON PC/DESKTOP */
         }
 
         .hero-overlay { 
@@ -79,7 +85,7 @@
             left: 0; 
             width: 100%; 
             height: 100%; 
-            background: linear-gradient(rgba(0,0,0,0.4), rgba(0,0,0,0.85)); /* Tint for clear text */
+            background: linear-gradient(rgba(0,0,0,0.4), rgba(0,0,0,0.85)); /* Smooth layout tint for white text readability */
             z-index: 2; 
         }
 
@@ -118,6 +124,7 @@
         <nav><ul><li><a href="#home">Home</a></li><li><a href="#menu">Menu</a></li><li><a href="#gallery">Gallery</a></li><li><a href="#testimonials">Testimonials</a></li><li><a href="#hire">Hire</a></li></ul></nav>
     </header>
 
+    <!-- Background Video Section -->
     <section id="home">
         <video autoplay loop muted playsinline class="bg-video">
             <source src="assets/videos/trailerbackground.mp4" type="video/mp4">
@@ -159,7 +166,7 @@
         .dough-text p { line-height: 1.8; color: #ccc; font-size: 1.1rem; }
         .dough-highlight { color: var(--gold); font-weight: bold; }
         .dough-image { flex: 1; min-width: 300px; text-align: center; }
-        .dough-image img { width: 100%; max-width: 500px; border-radius: 15px; box-shadow: 0 0 30px rgba(255, 25, 130, 0.1); }
+        .dough-image img { width: 100%; max-width: 500px; border-radius: 15px; box-shadow: 0 0 30px rgba(255, 253, 130, 0.1); }
     </style>
 
     <section id="process" class="dough-feature">
