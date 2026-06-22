@@ -94,10 +94,53 @@
         section { padding: 80px 8%; box-sizing: border-box; clear: both; }
         section h2 { font-size: clamp(2rem, 6vw, 2.5rem); text-align: center; margin-bottom: 1.5rem; } section h2::after { content: ''; display: block; width: 50px; height: 3px; background: var(--gold); margin: 10px auto; }
         
-        /* Menu Styles */
-        .menu-grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(250px, 1fr)); gap: 1.5rem; }
-        .menu-item { background: var(--f-bg); padding: 1.5rem; border-radius: 10px; border: 1px solid rgba(255,255,255,0.1); }
-        .menu-item h3 { color: var(--gold); margin: 0 0 10px 0; font-size: 1.3rem; }
+        /* Premium Pizza Profile Card Styles */
+        .menu-grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(280px, 1fr)); gap: 1.8rem; }
+        .menu-card { 
+            background: var(--f-bg); 
+            padding: 1.8rem; 
+            border-radius: 12px; 
+            border: 1px solid rgba(255,255,255,0.08); 
+            display: flex; 
+            flex-direction: column; 
+            justify-content: space-between; 
+            transition: all 0.3s ease; 
+        }
+        .menu-card:hover { 
+            transform: translateY(-5px); 
+            border-color: var(--gold); 
+            box-shadow: 0 10px 20px rgba(0,0,0,0.4);
+        }
+        .card-header { 
+            display: flex; 
+            justify-content: space-between; 
+            align-items: flex-start; 
+            gap: 10px;
+            margin-bottom: 8px; 
+        }
+        .menu-card h3 { color: var(--gold); margin: 0; font-size: 1.35rem; font-weight: 600; }
+        .menu-tag { 
+            background: rgba(255, 253, 130, 0.1); 
+            color: var(--gold); 
+            font-size: 0.7rem; 
+            font-weight: bold; 
+            padding: 4px 10px; 
+            border-radius: 20px; 
+            white-space: nowrap;
+            text-transform: uppercase; 
+            letter-spacing: 0.5px; 
+        }
+        .menu-card p { color: #aaa; font-size: 0.9rem; line-height: 1.4; margin: 0 0 15px 0; }
+        .menu-specs { 
+            border-top: 1px solid rgba(255,255,255,0.06); 
+            padding-top: 12px; 
+            font-size: 0.85rem; 
+            display: flex;
+            flex-direction: column;
+            gap: 6px;
+        }
+        .menu-specs div { color: #888; }
+        .menu-specs strong { color: #eee; font-weight: 500; }
         
         /* Dough Feature Styles */
         .dough-feature { background: #050505; border-top: 1px solid #222; border-bottom: 1px solid #222; display: flex; align-items: center; flex-wrap: wrap; gap: 40px; padding: 60px 8%; }
@@ -163,14 +206,105 @@
     <section id="menu">
         <h2>Sample Menu</h2>
         <div class="menu-grid">
-            <div class="menu-item"><h3>Margherita</h3><p>San Marzano Tomatoes, Fresh Fior di Latte, Olive Oil, and Basil.</p></div>
-            <div class="menu-item"><h3>Pepperoni</h3><p>Tomato Base, Fresh Mozzarella, and Premium Spicy Italian Pepperoni.</p></div>
-            <div class="menu-item"><h3>Spicy Scotsman</h3><p>Tomato Base, Mozzarella, Haggis, Jalapeños, and Hot Honey.</p></div>
-            <div class="menu-item"><h3>Pizza Bianca</h3><p>White base of Extra Virgin Olive Oil, Fresh Garlic, and Mozzarella.</p></div>
-            <div class="menu-item"><h3>Ham & Mushroom</h3><p>Tomato Base, Mozzarella, Ham, and Mushrooms.</p></div>
-            <div class="menu-item"><h3>Chicken & Onion</h3><p>Tomato Base, Mozzarella, Spicy Chicken, and Red Onions.</p></div>
-            <div class="menu-item"><h3>Pepperoni Sting</h3><p>Tomato Base, Mozzarella, Pepperoni, and Hot Honey Drizzle.</p></div>
-            <div class="menu-item"><h3>BBQ Chicken & Sweetcorn</h3><p>BBQ Base/Tomato Hybrid, Mozzarella, Spicy Chicken, and Sweetcorn.</p></div>
+            
+            <div class="menu-card">
+                <div class="card-header">
+                    <h3>Margherita</h3>
+                    <span class="menu-tag">🌱 Classic</span>
+                </div>
+                <p>The timeless Neapolitan standard, perfectly balanced and full of flavor.</p>
+                <div class="menu-specs">
+                    <div>Base: <strong>San Marzano Tomatoes & Fior di Latte</strong></div>
+                    <div>Finish: <strong>Extra Virgin Olive Oil & Fresh Basil</strong></div>
+                </div>
+            </div>
+
+            <div class="menu-card">
+                <div class="card-header">
+                    <h3>Pepperoni</h3>
+                    <span class="menu-tag">⭐ Popular</span>
+                </div>
+                <p>A traditional favorite crowded with premium, savory meat cut to curl crisp.</p>
+                <div class="menu-specs">
+                    <div>Base: <strong>San Marzano Tomatoes & Fior di Latte</strong></div>
+                    <div>Toppings: <strong>Premium Spicy Italian Pepperoni</strong></div>
+                </div>
+            </div>
+
+            <div class="menu-card">
+                <div class="card-header">
+                    <h3>Spicy Scotsman</h3>
+                    <span class="menu-tag">🔥 Fan Favourite</span>
+                </div>
+                <p>Our unique signature creation bringing bold, traditional local flavor with a sharp fiery kick.</p>
+                <div class="menu-specs">
+                    <div>Base: <strong>San Marzano Tomatoes & Fior di Latte</strong></div>
+                    <div>Toppings: <strong>Premium Haggis & Sliced Jalapeños</strong></div>
+                    <div>Finish: <strong>Sweet Hot Honey Drizzle</strong></div>
+                </div>
+            </div>
+
+            <div class="menu-card">
+                <div class="card-header">
+                    <h3>Pizza Bianca</h3>
+                    <span class="menu-tag">🧄 Garlic Crisp</span>
+                </div>
+                <p>An authentic white pizza focusing on aromatics and rich, creamy cheese profiles.</p>
+                <div class="menu-specs">
+                    <div>Base: <strong>EV Olive Oil & Chopped Fresh Garlic</strong></div>
+                    <div>Toppings: <strong>Creamy Melted Mozzarella & Herbs</strong></div>
+                </div>
+            </div>
+
+            <div class="menu-card">
+                <div class="card-header">
+                    <h3>Ham & Mushroom</h3>
+                    <span class="menu-tag">🍄 Traditional</span>
+                </div>
+                <p>A comforting, classic combo combining rich savory depth with earthy finishes.</p>
+                <div class="menu-specs">
+                    <div>Base: <strong>San Marzano Tomatoes & Fior di Latte</strong></div>
+                    <div>Toppings: <strong>Smoked Ham & Earthy Sliced Mushrooms</strong></div>
+                </div>
+            </div>
+
+            <div class="menu-card">
+                <div class="card-header">
+                    <h3>Chicken & Onion</h3>
+                    <span class="menu-tag">🍗 Savoury</span>
+                </div>
+                <p>Perfectly balanced texture and heat combining clean meats with a sweet bite.</p>
+                <div class="menu-specs">
+                    <div>Base: <strong>San Marzano Tomatoes & Fior di Latte</strong></div>
+                    <div>Toppings: <strong>Spicy Shredded Chicken & Red Onions</strong></div>
+                </div>
+            </div>
+
+            <div class="menu-card">
+                <div class="card-header">
+                    <h3>Pepperoni Sting</h3>
+                    <span class="menu-tag">🐝 Sweet & Spicy</span>
+                </div>
+                <p>The perfect profile crossover where rich smoky salts collide with sweet heat.</p>
+                <div class="menu-specs">
+                    <div>Base: <strong>San Marzano Tomatoes & Fior di Latte</strong></div>
+                    <div>Toppings: <strong>Spicy Italian Pepperoni</strong></div>
+                    <div>Finish: <strong>Artisanal Hot Honey Drizzle</strong></div>
+                </div>
+            </div>
+
+            <div class="menu-card">
+                <div class="card-header">
+                    <h3>BBQ Chicken & Sweetcorn</h3>
+                    <span class="menu-tag">🍕 Smoky Mix</span>
+                </div>
+                <p>A deep, sweet backyard profile tailored for rich, satisfying texturing.</p>
+                <div class="menu-specs">
+                    <div>Base: <strong>Smoky BBQ & San Marzano Tomato Hybrid</strong></div>
+                    <div>Toppings: <strong>Spicy Chicken & Crisp Sweetcorn</strong></div>
+                </div>
+            </div>
+
         </div>
     </section>
 
