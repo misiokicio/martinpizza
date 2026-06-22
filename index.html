@@ -37,7 +37,7 @@ HTML
             min-height: 60px !important;
           }
 
-          /* OPTION A: Turn the background video ON for mobile devices only */
+          /* TEMPORARILY TURNED OFF: Forces mobile to show the crisp photo instead of the video */
           .bg-video {
             display: none !important;
           }
@@ -60,8 +60,8 @@ HTML
             display: flex; 
             flex-direction: column; 
             justify-content: center; 
-            align-items: center; /* Brought text alignment back to the center */
-            text-align: center; /* Brought text alignment back to the center */
+            align-items: center; 
+            text-align: center; 
             background: url('hero1-trailer.jpg') center top / cover; 
             padding: 80px 10%; 
             box-sizing: border-box; 
@@ -86,14 +86,14 @@ HTML
             left: 0; 
             width: 100%; 
             height: 100%; 
-            background: linear-gradient(rgba(0,0,0,0.25), rgba(0,0,0,0.60)); /* Kept your preferred lighter transparency */
+            background: linear-gradient(rgba(0,0,0,0.25), rgba(0,0,0,0.60)); 
             z-index: 2; 
         }
 
         .hero-content { 
             position: relative; 
             z-index: 3; 
-            margin-top: 140px; /* Safely nudges the centered text down lower on the screen */
+            margin-top: 140px; 
         }
 
         #home h1 { font-size: clamp(2.5rem, 8vw, 4rem); margin: 0; line-height: 1.1; } #home h1 span { color: var(--gold); }
@@ -126,6 +126,7 @@ HTML
         <nav><ul><li><a href="#home">Home</a></li><li><a href="#menu">Menu</a></li><li><a href="#gallery">Gallery</a></li><li><a href="#testimonials">Testimonials</a></li><li><a href="#hire">Hire</a></li></ul></nav>
     </header>
 
+    <!-- Background Video Section -->
     <section id="home">
         <video autoplay loop muted playsinline class="bg-video">
             <source src="assets/videos/trailerbackground.mp4" type="video/mp4">
@@ -193,6 +194,7 @@ HTML
             <img src="pizza-2.jpg" alt="Pizza 2">
             <img src="pizza-3.jpg" alt="Pizza 3">
             <img src="pizza-4.jpg" alt="Pizza 4">
+            <!-- Expanded Gallery Layout Grid Slots -->
             <img src="pizza-5.jpg" alt="Pizza 5">
             <img src="pizza-6.jpg" alt="Pizza 6">
             <img src="pizza-7.jpg" alt="Pizza 7">
@@ -254,13 +256,17 @@ HTML
         <p>&copy; 2026 Marti_nPizza. All rights reserved.</p>
         <u><p><a href="#home">Back to Top</a></p></u>
     </footer>
+    
+    <!-- Upgraded Cross-Browser Responsive Progress Bar Tracking Script -->
     <script>
-        window.onscroll = function() {
-            var winScroll = document.body.scrollTop || document.documentElement.scrollTop;
+        window.addEventListener('scroll', function() {
+            var winScroll = window.scrollY || document.documentElement.scrollTop;
             var height = document.documentElement.scrollHeight - document.documentElement.clientHeight;
-            var scrolled = (winScroll / height) * 100;
-            document.getElementById("myBar").style.width = scrolled + "%";
-        };
+            if (height > 0) {
+                var scrolled = (winScroll / height) * 100;
+                document.getElementById("myBar").style.width = scrolled + "%";
+            }
+        });
     </script>
 </body>
 </html>
