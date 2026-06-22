@@ -73,6 +73,9 @@
             gap: 12px 20px !important;
             padding: 1.5rem 5% !important;
           }
+          .dietary-box {
+            padding: 2rem !important;
+          }
         }
           
         /* Progress Bar Styles */
@@ -267,6 +270,44 @@
         .dough-image { flex: 1; min-width: 300px; text-align: center; }
         .dough-image img { width: 100%; max-width: 500px; border-radius: 15px; box-shadow: 0 0 30px rgba(255, 253, 130, 0.1); }
         
+        /* Option 2: Premium Dietary Feature Box Styles */
+        .dietary-box {
+            background: #111;
+            border: 1px solid rgba(255,255,255,0.06);
+            border-radius: 15px;
+            padding: 3rem;
+            max-width: 900px;
+            margin: 0 auto;
+            box-shadow: 0 15px 40px rgba(0,0,0,0.5);
+        }
+        .dietary-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+            gap: 2.5rem;
+            margin-top: 2rem;
+        }
+        .dietary-item h3 {
+            color: var(--gold);
+            font-size: 1.25rem;
+            margin: 0 0 10px 0;
+            display: flex;
+            align-items: center;
+            gap: 8px;
+        }
+        .dietary-item p {
+            color: #ccc;
+            font-size: 0.95rem;
+            line-height: 1.6;
+            margin: 0;
+        }
+        .coeliac-warning {
+            color: #888 !important;
+            font-size: 0.8rem !important;
+            display: block;
+            margin-top: 8px;
+            font-style: italic;
+        }
+
         /* "How It Works" 3-Step Section Styles */
         .steps-grid {
             display: grid;
@@ -302,6 +343,58 @@
             font-size: 0.95rem;
             line-height: 1.6;
             margin: 0;
+        }
+
+        /* Option 1: Clean Interactive FAQ Accordion Styles */
+        .faq-accordion {
+            max-width: 750px;
+            margin: 0 auto;
+            display: flex;
+            flex-direction: column;
+            gap: 15px;
+        }
+        .faq-item {
+            background: var(--f-bg);
+            border: 1px solid rgba(255,255,255,0.05);
+            border-radius: 8px;
+            overflow: hidden;
+        }
+        .faq-item summary {
+            padding: 1.2rem;
+            font-weight: 600;
+            font-size: 1.05rem;
+            color: #fff;
+            cursor: pointer;
+            list-style: none;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            user-select: none;
+            transition: color 0.2s;
+        }
+        .faq-item summary:hover {
+            color: var(--gold);
+        }
+        .faq-item summary::-webkit-details-marker {
+            display: none;
+        }
+        .faq-item summary::after {
+            content: '＋';
+            color: var(--gold);
+            font-weight: bold;
+            font-size: 1.1rem;
+            transition: transform 0.3s;
+        }
+        .faq-item[open] summary::after {
+            content: '－';
+        }
+        .faq-content {
+            padding: 0 1.2rem 1.2rem 1.2rem;
+            color: #aaa;
+            font-size: 0.95rem;
+            line-height: 1.6;
+            border-top: 1px solid rgba(255,255,255,0.03);
+            padding-top: 12px;
         }
 
         /* WhatsApp Direct Integration Styles */
@@ -552,6 +645,23 @@
         </div>
     </section>
 
+    <section id="dietary-options" style="background: #080808; padding: 60px 8%; border-bottom: 1px solid #222;">
+        <div class="dietary-box">
+            <h2 style="margin-top: 0;">Dietary & Vegan Requirements</h2>
+            <p style="color: #aaa; font-size: 1.05rem; line-height: 1.6; margin-bottom: 1.8rem;">We believe absolutely nobody should have to miss out on exceptional pizza at your event. We proudly offer tailored options to ensure every single one of your guests is safely and deliciously catered for.</p>
+            <div class="dietary-grid">
+                <div class="dietary-item">
+                    <h3>🌿 100% Vegan Friendly</h3>
+                    <p>Any pizza on our sample menu can be customized using our premium, creamy vegan cheese substitute. It melts beautifully in our 500°C ovens, ensuring your vegan and dairy-intolerant guests get the exact same authentic Neapolitan style profile.</p>
+                </div>
+                <div class="dietary-item">
+                    <h3>🌾 Gluten Intolerances</h3>
+                    <p>We supply high-quality alternate pizza crust alternatives specifically crafted for guests with gluten intolerances. <span class="coocliac-warning"><strong>Please Note:</strong> Because our mobile trailer operates with traditional wheat flour continuously airborne inside the workspace, we cannot guarantee a 100% completely trace-free environment required for severe Coeliac disease.</span></p>
+                </div>
+            </div>
+        </div>
+    </section>
+
     <section id="gallery">
         <h2>Gallery</h2>
         <div class="gallery">
@@ -609,6 +719,28 @@
                 <h3>Ovens Fire Up</h3>
                 <p>We arrive in our custom professional mobile trailer setup, cooking fresh artisanal pizzas live at 500°C for your guests.</p>
             </div>
+        </div>
+    </section>
+
+    <section id="faq" style="background: #050505; border-top: 1px solid #222; border-bottom: 1px solid #222;">
+        <h2>Frequently Asked Questions</h2>
+        <div class="faq-accordion">
+            <details class="faq-item">
+                <summary>What areas across Scotland do you cover?</summary>
+                <div class="faq-content">We are proudly based in Bathgate, West Lothian, and routinely cater events across West Lothian, Edinburgh, Glasgow, Falkirk, and the Central Belt. Depending on the size of your booking, we can also provide nationwide catering across Scotland.</div>
+            </details>
+            <details class="faq-item">
+                <summary>How much space does your mobile pizza trailer require?</summary>
+                <div class="faq-content">Our custom professional pizza trailer requires flat, accessible ground surface area to set up safely and park. When you send over your event location details, we cross-verify the vehicle positioning tracking metrics to make sure logistics roll perfectly on the day.</div>
+            </details>
+            <details class="faq-item">
+                <summary>Can you handle vegan options and food allergies?</summary>
+                <div class="faq-content">Yes! We stock premium vegan melting cheeses for dairy-free or plant-based requirements. We also provide specialty alternative bases for guests with gluten intolerances. However, because our trailer environment features open flour handling, it is not suitable for severe Coeliac profiles.</div>
+            </details>
+            <details class="faq-item">
+                <summary>What happens if the traditional Scottish weather turns bad?</summary>
+                <div class="faq-content">Don't worry! Our catering trailer is a heavy-duty, completely self-contained, weather-protected mobile kitchen ecosystem. We operate perfectly in the rain and wind, keeping our stone ovens blazing at 500°C so your event timeline goes completely undisturbed.</div>
+            </details>
         </div>
     </section>
 
