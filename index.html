@@ -13,6 +13,7 @@
     <meta name="twitter:image" content="https://martinpizza.co.uk/pizza-1.jpg">
     <meta name="google-site-verification" content="m0H3ZujxA8bBpxwsPUO6AQcV49NRKqA1j2LYYng2b9Q" />
     <style>
+        /* Mobile Device Responsive Overrides (< 768px) */
         @media only screen and (max-width: 767px) {
           .navbar-brand, .logo, .site-title {
             font-size: 1.2rem !important; 
@@ -30,6 +31,41 @@
           }
           .bg-video {
             display: none !important;
+          }
+
+          /* Option 1: Premium Mobile App Style Menu Layout Engines */
+          .menu-card-container {
+            height: auto !important; /* Unlocks vertical spacing constraint on mobile */
+          }
+          .menu-card {
+            transform: none !important;
+            transform-style: flat !important;
+            display: flex !important;
+            flex-direction: column !important; /* Stacks image on top, text on bottom */
+          }
+          .menu-card-container:hover .menu-card {
+            transform: none !important; /* Disables 3D rotation on mobile touches */
+          }
+          .card-front, .card-back {
+            position: relative !important;
+            width: 100% !important;
+            backface-visibility: visible !important;
+            transform: none !important;
+          }
+          .card-back {
+            order: 1 !important; /* Forces pizza picture to the very top of the card */
+            height: 200px !important; /* Perfect visual framing height for phone screens */
+            border-radius: 12px 12px 0 0 !important;
+            border-bottom: none !important;
+          }
+          .card-front {
+            order: 2 !important; /* Places structured specs directly underneath image */
+            border-radius: 0 0 12px 12px !important;
+            border-top: none !important;
+            padding: 1.5rem !important;
+          }
+          .card-back-title {
+            display: none !important; /* Hides duplicate overlay name on mobile layout */
           }
         }
           
@@ -94,7 +130,7 @@
         section { padding: 80px 8%; box-sizing: border-box; clear: both; }
         section h2 { font-size: clamp(2rem, 6vw, 2.5rem); text-align: center; margin-bottom: 1.5rem; } section h2::after { content: ''; display: block; width: 50px; height: 3px; background: var(--gold); margin: 10px auto; }
         
-        /* 3D Flip Card Layout Engine Styles */
+        /* 3D Flip Card Layout Engine Styles (Desktop Default) */
         .menu-grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(280px, 1fr)); gap: 1.8rem; }
         
         .menu-card-container { 
@@ -252,7 +288,7 @@
         <div class="stat"><h3>Scotland</h3><p>Nationwide</p></div>
     </div>
 
-    <!-- Upgraded Interactive 3D Flip Menu Section with Verified Image Mapping -->
+    <!-- Interactive 3D Flip Menu Section with Verified Image Mapping & App-Style Mobile Fallback -->
     <section id="menu">
         <h2>Sample Menu</h2>
         <div class="menu-grid">
