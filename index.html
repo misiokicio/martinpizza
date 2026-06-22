@@ -79,7 +79,7 @@
         .progress-container { position: fixed; top: 0; left: 0; width: 100%; height: 4px; z-index: 1001; }
         .progress-bar { height: 4px; background: var(--gold); width: 0%; box-shadow: 0 0 10px var(--gold); }
         
-        :root { --gold: #fffd82; --bg: #000; --f-bg: #111; }
+        :root { --gold: #fffd82; --bg: #000; --f-bg: #111; --whatsapp: #25D366; }
         body { margin: 0; font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif; background: var(--bg); color: #fff; scroll-behavior: smooth; -webkit-font-smoothing: antialiased; }
         a { text-decoration: none; color: inherit; transition: 0.3s; }
         header { background: rgba(0,0,0,0.95); position: fixed; top: 0; width: 100%; display: flex; justify-content: space-between; align-items: center; padding: 1rem 5%; box-sizing: border-box; z-index: 1000; border-bottom: 1px solid rgba(255,255,255,0.1); }
@@ -128,7 +128,7 @@
         #home h1 { font-size: clamp(2.5rem, 8vw, 4rem); margin: 0; line-height: 1.1; } #home h1 span { color: var(--gold); }
         .btn { background: var(--gold); color: #000; padding: 1rem 2rem; border-radius: 50px; font-weight: bold; margin-top: 25px; display: inline-block; }
         
-        /* Option 3: Premium Trust Checkmarks Bar Styles */
+        /* Premium Trust Checkmarks Bar Styles */
         .trust-bar {
             background: #080808;
             border-bottom: 1px solid rgba(255,255,255,0.06);
@@ -267,7 +267,7 @@
         .dough-image { flex: 1; min-width: 300px; text-align: center; }
         .dough-image img { width: 100%; max-width: 500px; border-radius: 15px; box-shadow: 0 0 30px rgba(255, 253, 130, 0.1); }
         
-        /* Option 2: Premium "How It Works" 3-Step Section Styles */
+        /* "How It Works" 3-Step Section Styles */
         .steps-grid {
             display: grid;
             grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
@@ -304,6 +304,22 @@
             margin: 0;
         }
 
+        /* WhatsApp Direct Integration Styles */
+        .whatsapp-prompt {
+            text-align: center;
+            margin-top: 20px;
+            font-size: 0.95rem;
+            color: #ccc;
+        }
+        .whatsapp-prompt a {
+            color: var(--whatsapp);
+            font-weight: bold;
+            text-decoration: underline;
+        }
+        .whatsapp-prompt a:hover {
+            color: #fff;
+        }
+
         /* Gallery Styles */
         .gallery { display: grid; grid-template-columns: repeat(2, 1fr); gap: 10px; }
         @media (min-width: 768px) { .gallery { grid-template-columns: repeat(4, 1fr); } }
@@ -327,6 +343,7 @@
         footer { background: #080808; text-align: center; padding: 40px 5%; border-top: 1px solid rgba(255,255,255,0.1); }
         .social { display: flex; justify-content: center; gap: 25px; margin-bottom: 20px; } .social svg { width: 30px; height: 30px; fill: #fff; }
         .contact p { margin: 8px 0; } .contact a { color: var(--gold); font-weight: bold; }
+        .contact .wa-footer-link { color: var(--whatsapp) !important; font-weight: bold; }
     </style>
 </head>
 <body>
@@ -349,7 +366,7 @@
         </div>
     </section>
 
-    <!-- Option 3: Premium Brand Trust Checkmarks Bar -->
+    <!-- Brand Trust Checkmarks Bar -->
     <div class="trust-bar">
         <div class="trust-item"><span>✓</span> Authentic 48-Hour Slow Ferment</div>
         <div class="trust-item"><span>✓</span> Live Mobile Trailer Catering</div>
@@ -588,14 +605,14 @@
         </div>
     </section>
 
-    <!-- Option 2: Premium "How It Works" 3-Step Section -->
+    <!-- "How It Works" 3-Step Section -->
     <section id="how-it-works">
         <h2>How It Works</h2>
         <div class="steps-grid">
             <div class="step-card">
                 <div class="step-number">01</div>
                 <h3>Check Your Date</h3>
-                <p>Submit a quick inquiry through our form below with your event details to immediately lock in layout availability tracking.</p>
+                <p>Submit a quick inquiry through our form below with your event details to check availability.</p>
             </div>
             <div class="step-card">
                 <div class="step-number">02</div>
@@ -622,6 +639,9 @@
             <textarea name="message" placeholder="Event Location & Details..." rows="4"></textarea>
             <button type="submit" class="submit">Submit Inquiry</button>
         </form>
+        <div class="whatsapp-prompt">
+            Prefer texting? <a href="https://wa.me/447909169944" target="_blank">Click here</a> to chat with us directly on WhatsApp.
+        </div>
     </section>
 
     <footer>
@@ -631,7 +651,7 @@
             <a href="https://www.tiktok.com/@marti_npizza" target="_blank"><svg viewBox="0 0 24 24"><path d="M12.525.02c1.31-.02 2.61-.01 3.91-.02.08 1.53.63 3.09 1.75 4.17 1.12 1.11 2.7 1.62 4.24 1.79v4.03c-1.44-.05-2.89-.35-4.2-.97-.57-.26-1.1-.59-1.62-.93-.01 2.92.01 5.84-.02 8.75-.08 1.4-.54 2.79-1.35 3.94-1.31 1.92-3.58 3.17-5.91 3.21-1.43.08-2.86-.31-4.08-1.03-2.02-1.19-3.44-3.37-3.59-5.71-.29-3.37 2.13-6.48 5.4-7.2 1.19-.27 2.48-.12 3.57.44V14.2c-.44-.47-1.01-.81-1.65-.98-1.58-.39-3.41.25-4.24 1.74-.45.82-.55 1.83-.34 2.73.14.83.52 1.62 1.14 2.16.81.72 1.9 1.08 2.97 1.01 1.25-.07 2.42-.68 3.12-1.72.37-.53.55-1.14.59-1.78.01-4.08 0-8.16.01-12.23.01-.01.01-.02.01-.03z"/></svg></a>
         </div>
         <div class="contact">
-            <p><a href="mailto:info@martinpizza.co.uk">info@martinpizza.co.uk</a> | 07846547293</p>
+            <p><a href="mailto:info@martinpizza.co.uk">info@martinpizza.co.uk</a> | 07846547293 | <a href="https://wa.me/447909169944" target="_blank" class="wa-footer-link">WhatsApp</a></p>
         </div>
         <p>&copy; 2026 Marti_nPizza. All rights reserved.</p>
         <u><p><a href="#home">Back to Top</a></p></u>
