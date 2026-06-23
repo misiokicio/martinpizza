@@ -19,14 +19,11 @@
             font-size: 1.2rem !important; 
             max-width: 60% !important;
           }
-          .navbar-nav, .menu, .nav-menu {
-            margin-top: 10px !important;
-          }
           body {
             padding-top: 80px !important; 
           }
           header, .site-header, #header {
-            padding: 10px 0 !important;
+            padding: 10px 5% !important;
             min-height: 60px !important;
           }
           .bg-video {
@@ -79,7 +76,7 @@
         }
           
         /* Progress Bar Styles */
-        .progress-container { position: fixed; top: 0; left: 0; width: 100%; height: 4px; z-index: 1001; }
+        .progress-container { position: fixed; top: 0; left: 0; width: 100%; height: 4px; z-index: 1002; }
         .progress-bar { height: 4px; background: var(--gold); width: 0%; box-shadow: 0 0 10px var(--gold); }
         
         :root { --gold: #fffd82; --bg: #000; --f-bg: #111; --whatsapp: #25D366; }
@@ -87,7 +84,79 @@
         a { text-decoration: none; color: inherit; transition: 0.3s; }
         header { background: rgba(0,0,0,0.95); position: fixed; top: 0; width: 100%; display: flex; justify-content: space-between; align-items: center; padding: 1rem 5%; box-sizing: border-box; z-index: 1000; border-bottom: 1px solid rgba(255,255,255,0.1); }
         .logo { font-size: 1.3rem; font-weight: bold; } .logo span { color: var(--gold); }
-        nav ul { list-style: none; display: flex; gap: 1.0rem; margin: 0; padding: 0; font-size: 0.85rem; }
+        
+        /* Premium Glowing Gold Hamburger Trigger Styles */
+        .hamburger {
+            display: flex;
+            flex-direction: column;
+            justify-content: space-between;
+            width: 26px;
+            height: 18px;
+            background: transparent;
+            border: none;
+            cursor: pointer;
+            padding: 0;
+            z-index: 1001;
+        }
+        .hamburger .bar {
+            width: 100%;
+            height: 2px;
+            background-color: var(--gold);
+            transition: transform 0.3s cubic-bezier(0.4, 0, 0.2, 1), opacity 0.3s;
+            border-radius: 4px;
+            box-shadow: 0 0 4px rgba(255, 253, 130, 0.3);
+        }
+        
+        /* Interactive Animation Transforms (Morph to 'X') */
+        .hamburger.active .bar:nth-child(1) {
+            transform: translateY(8px) rotate(45deg);
+        }
+        .hamburger.active .bar:nth-child(2) {
+            opacity: 0;
+        }
+        .hamburger.active .bar:nth-child(3) {
+            transform: translateY(-8px) rotate(-45deg);
+        }
+
+        /* Slide-Out Navigation Panel Styles */
+        .nav-menu {
+            position: fixed;
+            top: 0;
+            right: -100%;
+            width: 280px;
+            height: 100vh;
+            background: rgba(10, 10, 10, 0.98);
+            backdrop-filter: blur(10px);
+            -webkit-backdrop-filter: blur(10px);
+            border-left: 2px solid var(--gold);
+            padding-top: 100px;
+            box-sizing: border-box;
+            transition: right 0.4s cubic-bezier(0.4, 0, 0.2, 1);
+            z-index: 999;
+            box-shadow: -10px 0 30px rgba(0,0,0,0.5);
+        }
+        .nav-menu.active {
+            right: 0;
+        }
+        .nav-menu ul {
+            list-style: none;
+            display: flex;
+            flex-direction: column;
+            gap: 1.8rem;
+            padding: 0 15%;
+            margin: 0;
+        }
+        .nav-menu ul li a {
+            font-size: 1.25rem;
+            font-weight: 600;
+            letter-spacing: 1px;
+            display: inline-block;
+            transition: color 0.3s, transform 0.3s;
+        }
+        .nav-menu ul li a:hover {
+            color: var(--gold);
+            transform: translateX(8px);
+        }
         
         /* #home Styles */
         #home { 
@@ -270,7 +339,7 @@
         .dough-image { flex: 1; min-width: 300px; text-align: center; }
         .dough-image img { width: 100%; max-width: 500px; border-radius: 15px; box-shadow: 0 0 30px rgba(255, 253, 130, 0.1); }
         
-        /* Option 2: Premium Dietary Feature Box Styles */
+        /* Premium Dietary Feature Box Styles */
         .dietary-box {
             background: #111;
             border: 1px solid rgba(255,255,255,0.06);
@@ -345,7 +414,7 @@
             margin: 0;
         }
 
-        /* Option 1: Clean Interactive FAQ Accordion Styles */
+        /* Clean Interactive FAQ Accordion Styles */
         .faq-accordion {
             max-width: 750px;
             margin: 0 auto;
@@ -441,11 +510,30 @@
 </head>
 <body>
     <div class="progress-container"><div class="progress-bar" id="myBar"></div></div>
+    
     <header>
         <div class="logo"><span>Marti</span>_nPizza</div>
-        <nav><ul><li><a href="#home">Home</a></li><li><a href="#menu">Menu</a></li><li><a href="#gallery">Gallery</a></li><li><a href="#testimonials">Testimonials</a></li><li><a href="#hire">Hire</a></li></ul></nav>
+        
+        <!-- Interactive Glowing Hamburger Button Trigger -->
+        <button class="hamburger" onclick="toggleMenu()" aria-label="Toggle Menu">
+            <span class="bar"></span>
+            <span class="bar"></span>
+            <span class="bar"></span>
+        </button>
+        
+        <!-- Animated Slide-out Right Panel Menu Panel Container -->
+        <nav class="nav-menu" id="navMenu">
+            <ul>
+                <li><a href="#home" onclick="toggleMenu()">Home</a></li>
+                <li><a href="#menu" onclick="toggleMenu()">Menu</a></li>
+                <li><a href="#gallery" onclick="toggleMenu()">Gallery</a></li>
+                <li><a href="#testimonials" onclick="toggleMenu()">Testimonials</a></li>
+                <li><a href="#hire" onclick="toggleMenu()">Hire Us</a></li>
+            </ul>
+        </nav>
     </header>
 
+    <!-- Background Hero Section -->
     <section id="home">
         <video autoplay loop muted playsinline class="bg-video">
             <source src="assets/videos/trailerbackground.mp4" type="video/mp4">
@@ -458,6 +546,7 @@
         </div>
     </section>
 
+    <!-- Brand Trust Checkmarks Bar -->
     <div class="trust-bar">
         <div class="trust-item"><span>✓</span> Authentic 48-Hour Slow Ferment</div>
         <div class="trust-item"><span>✓</span> Live Mobile Trailer Catering</div>
@@ -472,10 +561,12 @@
         <div class="stat"><h3>Scotland</h3><p>Nationwide</p></div>
     </div>
 
+    <!-- Interactive 3D Flip Menu Section with Verified Image Mapping & App-Style Mobile Fallback -->
     <section id="menu">
         <h2>Sample Menu</h2>
         <div class="menu-grid">
             
+            <!-- Card 1: Margherita -->
             <div class="menu-card-container">
                 <div class="menu-card">
                     <div class="card-front">
@@ -495,6 +586,7 @@
                 </div>
             </div>
 
+            <!-- Card 2: Pepperoni -->
             <div class="menu-card-container">
                 <div class="menu-card">
                     <div class="card-front">
@@ -514,6 +606,7 @@
                 </div>
             </div>
 
+            <!-- Card 3: Spicy Scotsman -->
             <div class="menu-card-container">
                 <div class="menu-card">
                     <div class="card-front">
@@ -534,6 +627,7 @@
                 </div>
             </div>
 
+            <!-- Card 4: Pizza Bianca -->
             <div class="menu-card-container">
                 <div class="menu-card">
                     <div class="card-front">
@@ -553,6 +647,7 @@
                 </div>
             </div>
 
+            <!-- Card 5: Ham & Mushroom -->
             <div class="menu-card-container">
                 <div class="menu-card">
                     <div class="card-front">
@@ -572,6 +667,7 @@
                 </div>
             </div>
 
+            <!-- Card 6: Chicken & Onion -->
             <div class="menu-card-container">
                 <div class="menu-card">
                     <div class="card-front">
@@ -591,6 +687,7 @@
                 </div>
             </div>
 
+            <!-- Card 7: Pepperoni Sting -->
             <div class="menu-card-container">
                 <div class="menu-card">
                     <div class="card-front">
@@ -611,6 +708,7 @@
                 </div>
             </div>
 
+            <!-- Card 8: BBQ Chicken & Sweetcorn -->
             <div class="menu-card-container">
                 <div class="menu-card">
                     <div class="card-front">
@@ -633,6 +731,7 @@
         </div>
     </section>
 
+    <!-- Process Section -->
     <section id="process" class="dough-feature">
         <div class="dough-text">
             <h2>The Secret is in the Dough</h2>
@@ -645,6 +744,7 @@
         </div>
     </section>
 
+    <!-- Premium Dietary & Vegan Callout Section -->
     <section id="dietary-options" style="background: #080808; padding: 60px 8%; border-bottom: 1px solid #222;">
         <div class="dietary-box">
             <h2 style="margin-top: 0;">Dietary & Vegan Requirements</h2>
@@ -656,12 +756,13 @@
                 </div>
                 <div class="dietary-item">
                     <h3>🌾 Gluten Intolerances</h3>
-                    <p>We supply high-quality alternate pizza crust alternatives specifically crafted for guests with gluten intolerances. <span class="coocliac-warning"><strong>Please Note:</strong> Because our mobile trailer operates with traditional wheat flour continuously airborne inside the workspace, we cannot guarantee a 100% completely trace-free environment required for severe Coeliac disease.</span></p>
+                    <p>We supply high-quality alternate pizza crust alternatives specifically crafted for guests with gluten intolerances. <span class="coeliac-warning"><strong>Please Note:</strong> Because our mobile trailer operates with traditional wheat flour continuously airborne inside the workspace, we cannot guarantee a 100% completely trace-free environment required for severe Coeliac disease.</span></p>
                 </div>
             </div>
         </div>
     </section>
 
+    <!-- Gallery Section -->
     <section id="gallery">
         <h2>Gallery</h2>
         <div class="gallery">
@@ -680,6 +781,7 @@
         </div>
     </section>
 
+    <!-- Testimonials Section -->
     <section id="testimonials">
         <h2>What People Say</h2>
         <div class="testimonials">
@@ -701,6 +803,7 @@
         </div>
     </section>
 
+    <!-- "How It Works" 3-Step Section -->
     <section id="how-it-works">
         <h2>How It Works</h2>
         <div class="steps-grid">
@@ -722,6 +825,7 @@
         </div>
     </section>
 
+    <!-- Objection-Buster FAQ Section -->
     <section id="faq" style="background: #050505; border-top: 1px solid #222; border-bottom: 1px solid #222;">
         <h2>Frequently Asked Questions</h2>
         <div class="faq-accordion">
@@ -744,6 +848,7 @@
         </div>
     </section>
 
+    <!-- Booking Form Section -->
     <section id="hire">
         <h2>Hire Us</h2>
         <form action="https://formspree.io/f/mdawybko" method="POST">
@@ -769,6 +874,7 @@
         <div class="contact">
             <p><a href="mailto:info@martinpizza.co.uk">info@martinpizza.co.uk</a> | 07846547293 | <a href="https://wa.me/447909169944" target="_blank" class="wa-footer-link">WhatsApp</a></p>
         </div>
+        <!-- Legal Privacy Guardrail Line -->
         <p style="font-size: 0.8rem; color: #666; max-width: 600px; margin: 15px auto; line-height: 1.4;">
             <strong>Privacy Notice:</strong> We use zero tracking cookies on this site. Any personal details submitted via our enquiry form are securely processed via Formspree solely to manage your catering booking and are never shared.
         </p>
@@ -776,7 +882,13 @@
         <u><p><a href="#home">Back to Top</a></p></u>
     </footer>
     
+    <!-- Micro JavaScript Layout Engine for Drawer Toggle -->
     <script>
+        function toggleMenu() {
+            document.querySelector('.hamburger').classList.toggle('active');
+            document.getElementById('navMenu').classList.toggle('active');
+        }
+
         window.onscroll = function() {
             var winScroll = window.scrollY || window.pageYOffset || document.documentElement.scrollTop || document.body.scrollTop;
             var height = document.documentElement.scrollHeight - document.documentElement.clientHeight;
