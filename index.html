@@ -2,16 +2,98 @@
 <html lang="en">
 <head>
     <meta charset="UTF-8">
-    <meta property="og:description" content="Authentic 48-hour fermented Neapolitan pizza catering for weddings and events across Scotland.">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Marti_nPizza | Neapolitan Style Pizza Catering</title>
-    <meta property="og:title" content="Marti_nPizza | Neapolitan Style Pizza Catering">
+    <title>Marti_nPizza | Neapolitan Pizza Catering Edinburgh, Glasgow & Scotland</title>
+    <meta name="description" content="Authentic 48-hour fermented Neapolitan pizza catering for weddings and events across Edinburgh, Glasgow, West Lothian and all of Scotland. Mobile pizza trailer hire from Bathgate.">
+    <meta name="keywords" content="pizza catering Scotland, mobile pizza van Edinburgh, wedding pizza catering Glasgow, Neapolitan pizza catering West Lothian, pizza trailer hire Scotland, event catering Bathgate">
+
+    <!-- Open Graph -->
+    <meta property="og:title" content="Marti_nPizza | Neapolitan Pizza Catering Edinburgh & Scotland">
+    <meta property="og:description" content="Authentic 48-hour fermented Neapolitan pizza catering for weddings and events across Edinburgh, Glasgow, West Lothian and all of Scotland.">
     <meta property="og:image" content="https://martinpizza.co.uk/pizza-1.jpg">
     <meta property="og:url" content="https://martinpizza.co.uk">
     <meta property="og:type" content="website">
     <meta name="twitter:card" content="summary_large_image">
     <meta name="twitter:image" content="https://martinpizza.co.uk/pizza-1.jpg">
     <meta name="google-site-verification" content="m0H3ZujxA8bBpxwsPUO6AQcV49NRKqA1j2LYYng2b9Q" />
+
+    <!-- LocalBusiness + FoodEstablishment Schema -->
+    <script type="application/ld+json">
+    {
+      "@context": "https://schema.org",
+      "@type": ["FoodEstablishment", "LocalBusiness"],
+      "name": "Marti_nPizza",
+      "description": "Authentic 48-hour fermented Neapolitan pizza catering for weddings, corporate events and private parties across Edinburgh, Glasgow, West Lothian and all of Scotland.",
+      "url": "https://martinpizza.co.uk",
+      "telephone": "+447846547293",
+      "email": "info@martinpizza.co.uk",
+      "image": "https://martinpizza.co.uk/pizza-1.jpg",
+      "servesCuisine": "Neapolitan Pizza",
+      "priceRange": "££",
+      "address": {
+        "@type": "PostalAddress",
+        "addressLocality": "Bathgate",
+        "addressRegion": "West Lothian",
+        "addressCountry": "GB"
+      },
+      "areaServed": [
+        {"@type": "City", "name": "Edinburgh"},
+        {"@type": "City", "name": "Glasgow"},
+        {"@type": "City", "name": "Falkirk"},
+        {"@type": "AdministrativeArea", "name": "West Lothian"},
+        {"@type": "AdministrativeArea", "name": "Central Belt"},
+        {"@type": "Country", "name": "Scotland"}
+      ],
+      "sameAs": [
+        "https://www.facebook.com/Martinpizzza/",
+        "https://www.instagram.com/marti_npizza",
+        "https://www.tiktok.com/@marti_npizza"
+      ]
+    }
+    </script>
+
+    <!-- FAQPage Schema -->
+    <script type="application/ld+json">
+    {
+      "@context": "https://schema.org",
+      "@type": "FAQPage",
+      "mainEntity": [
+        {
+          "@type": "Question",
+          "name": "What areas across Scotland do you cover for pizza catering?",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "We are proudly based in Bathgate, West Lothian, and routinely cater events across West Lothian, Edinburgh, Glasgow, Falkirk, and the Central Belt. Depending on the size of your booking, we can also provide nationwide catering across Scotland."
+          }
+        },
+        {
+          "@type": "Question",
+          "name": "How much space does your mobile pizza trailer require?",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "Our custom professional pizza trailer requires flat, accessible ground surface area to set up safely and park. When you send over your event location details, we verify the vehicle positioning to make sure logistics roll perfectly on the day."
+          }
+        },
+        {
+          "@type": "Question",
+          "name": "Do you offer vegan pizza options and can you cater for food allergies?",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "Yes! We stock premium vegan melting cheeses for dairy-free or plant-based requirements. We also provide specialty alternative bases for guests with gluten intolerances. However, because our trailer environment features open flour handling, it is not suitable for severe Coeliac profiles."
+          }
+        },
+        {
+          "@type": "Question",
+          "name": "What happens if the weather is bad on the day of our event?",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "Our catering trailer is a heavy-duty, completely self-contained, weather-protected mobile kitchen. We operate perfectly in the rain and wind, keeping our stone ovens blazing at 500°C so your event timeline goes completely undisturbed."
+          }
+        }
+      ]
+    }
+    </script>
+
     <style>
         /* Mobile Device Responsive Overrides (< 768px) */
         @media only screen and (max-width: 767px) {
@@ -30,7 +112,6 @@
             display: none !important;
           }
 
-          /* Premium Mobile App Style Menu Layout Engines */
           .menu-card-container {
             height: auto !important; 
           }
@@ -65,13 +146,16 @@
             display: none !important; 
           }
           
-          /* Mobile spacing adjustments for new structures */
           .trust-bar {
             gap: 12px 20px !important;
             padding: 1.5rem 5% !important;
           }
           .dietary-box {
             padding: 2rem !important;
+          }
+
+          .coverage-list {
+            grid-template-columns: repeat(2, 1fr) !important;
           }
         }
           
@@ -85,7 +169,6 @@
         header { background: rgba(0,0,0,0.95); position: fixed; top: 0; width: 100%; display: flex; justify-content: space-between; align-items: center; padding: 1rem 5%; box-sizing: border-box; z-index: 1000; border-bottom: 1px solid rgba(255,255,255,0.1); }
         .logo { font-size: 1.3rem; font-weight: bold; } .logo span { color: var(--gold); }
         
-        /* Premium Glowing Gold Hamburger Trigger Styles */
         .hamburger {
             display: flex;
             flex-direction: column;
@@ -106,19 +189,10 @@
             border-radius: 4px;
             box-shadow: 0 0 4px rgba(255, 253, 130, 0.3);
         }
-        
-        /* Interactive Animation Transforms (Morph to 'X') */
-        .hamburger.active .bar:nth-child(1) {
-            transform: translateY(8px) rotate(45deg);
-        }
-        .hamburger.active .bar:nth-child(2) {
-            opacity: 0;
-        }
-        .hamburger.active .bar:nth-child(3) {
-            transform: translateY(-8px) rotate(-45deg);
-        }
+        .hamburger.active .bar:nth-child(1) { transform: translateY(8px) rotate(45deg); }
+        .hamburger.active .bar:nth-child(2) { opacity: 0; }
+        .hamburger.active .bar:nth-child(3) { transform: translateY(-8px) rotate(-45deg); }
 
-        /* Slide-Out Navigation Panel Styles */
         .nav-menu {
             position: fixed;
             top: 0;
@@ -135,9 +209,7 @@
             z-index: 999;
             box-shadow: -10px 0 30px rgba(0,0,0,0.5);
         }
-        .nav-menu.active {
-            right: 0;
-        }
+        .nav-menu.active { right: 0; }
         .nav-menu ul {
             list-style: none;
             display: flex;
@@ -153,12 +225,8 @@
             display: inline-block;
             transition: color 0.3s, transform 0.3s;
         }
-        .nav-menu ul li a:hover {
-            color: var(--gold);
-            transform: translateX(8px);
-        }
+        .nav-menu ul li a:hover { color: var(--gold); transform: translateX(8px); }
         
-        /* #home Styles */
         #home { 
             position: relative; 
             min-height: 100vh; 
@@ -173,34 +241,19 @@
             overflow: hidden;
         }
         .bg-video { 
-            position: absolute; 
-            top: 50%; 
-            left: 50%; 
-            width: 100%; 
-            height: 100%; 
-            object-fit: cover; 
-            transform: translate(-50%, -50%); 
-            z-index: 1; 
-            display: none; 
+            position: absolute; top: 50%; left: 50%; width: 100%; height: 100%; 
+            object-fit: cover; transform: translate(-50%, -50%); z-index: 1; display: none; 
         }
         .hero-overlay { 
-            position: absolute; 
-            top: 0; 
-            left: 0; 
-            width: 100%; 
-            height: 100%; 
-            background: linear-gradient(rgba(0,0,0,0.25), rgba(0,0,0,0.60)); 
-            z-index: 2; 
+            position: absolute; top: 0; left: 0; width: 100%; height: 100%; 
+            background: linear-gradient(rgba(0,0,0,0.25), rgba(0,0,0,0.60)); z-index: 2; 
         }
-        .hero-content { 
-            position: relative; 
-            z-index: 3; 
-            margin-top: 140px; 
-        }
-        #home h1 { font-size: clamp(2.5rem, 8vw, 4rem); margin: 0; line-height: 1.1; } #home h1 span { color: var(--gold); }
+        .hero-content { position: relative; z-index: 3; margin-top: 140px; }
+        #home h1 { font-size: clamp(2.5rem, 8vw, 4rem); margin: 0; line-height: 1.1; } 
+        #home h1 span { color: var(--gold); }
+        .hero-subtitle { font-size: 1.1rem; color: #ddd; margin-top: 10px; }
         .btn { background: var(--gold); color: #000; padding: 1rem 2rem; border-radius: 50px; font-weight: bold; margin-top: 25px; display: inline-block; }
         
-        /* Premium Trust Checkmarks Bar Styles */
         .trust-bar {
             background: #080808;
             border-bottom: 1px solid rgba(255,255,255,0.06);
@@ -220,116 +273,32 @@
             gap: 8px;
             letter-spacing: 0.5px;
         }
-        .trust-item span {
-            color: var(--gold);
-            font-size: 1.1rem;
-        }
+        .trust-item span { color: var(--gold); font-size: 1.1rem; }
 
-        /* Stats Styles */
         .stats { background: var(--gold); color: #000; display: grid; grid-template-columns: repeat(2, 1fr); padding: 2rem 5%; text-align: center; gap: 20px; }
         @media (min-width: 768px) { .stats { grid-template-columns: repeat(4, 1fr); } }
         .stat h3 { margin: 0; font-size: 1.3rem; } .stat p { margin: 0; font-size: 0.7rem; font-weight: bold; text-transform: uppercase; letter-spacing: 1px; }
         
         section { padding: 80px 8%; box-sizing: border-box; clear: both; }
-        section h2 { font-size: clamp(2rem, 6vw, 2.5rem); text-align: center; margin-bottom: 1.5rem; } section h2::after { content: ''; display: block; width: 50px; height: 3px; background: var(--gold); margin: 10px auto; }
+        section h2 { font-size: clamp(2rem, 6vw, 2.5rem); text-align: center; margin-bottom: 1.5rem; } 
+        section h2::after { content: ''; display: block; width: 50px; height: 3px; background: var(--gold); margin: 10px auto; }
         
-        /* 3D Flip Card Layout Engine Styles (Desktop Default) */
         .menu-grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(280px, 1fr)); gap: 1.8rem; }
-        
-        .menu-card-container { 
-            perspective: 1000px; 
-            height: 350px; 
-            cursor: pointer;
-        }
-        
-        .menu-card { 
-            width: 100%; 
-            height: 100%; 
-            position: relative; 
-            transform-style: preserve-3d; 
-            transition: transform 0.7s cubic-bezier(0.4, 0, 0.2, 1); 
-        }
-        
-        .menu-card-container:hover .menu-card { 
-            transform: rotateY(180deg); 
-        }
-        
-        .card-front, .card-back { 
-            position: absolute; 
-            top: 0; 
-            left: 0; 
-            width: 100%; 
-            height: 100%; 
-            backface-visibility: hidden; 
-            border-radius: 12px; 
-            box-sizing: border-box; 
-        }
-        
-        .card-front { 
-            background: var(--f-bg); 
-            padding: 1.8rem; 
-            border: 1px solid rgba(255,255,255,0.08); 
-            display: flex; 
-            flex-direction: column; 
-            justify-content: space-between; 
-            z-index: 2;
-            transform: rotateY(0deg);
-        }
-        
-        .card-back { 
-            background-size: cover; 
-            background-position: center; 
-            transform: rotateY(180deg); 
-            border: 2px solid var(--gold); 
-            display: flex;
-            align-items: flex-end;
-            padding: 1.5rem;
-            box-shadow: 0 10px 25px rgba(0,0,0,0.5);
-        }
-        
-        .card-back-title {
-            color: #fff;
-            font-weight: bold;
-            font-size: 1.25rem;
-            text-shadow: 0 2px 8px rgba(0,0,0,0.9);
-            background: rgba(0, 0, 0, 0.6);
-            padding: 6px 14px;
-            border-radius: 6px;
-            border-left: 3px solid var(--gold);
-        }
-        
-        .card-header { 
-            display: flex; 
-            justify-content: space-between; 
-            align-items: flex-start; 
-            gap: 10px;
-            margin-bottom: 8px; 
-        }
+        .menu-card-container { perspective: 1000px; height: 350px; cursor: pointer; }
+        .menu-card { width: 100%; height: 100%; position: relative; transform-style: preserve-3d; transition: transform 0.7s cubic-bezier(0.4, 0, 0.2, 1); }
+        .menu-card-container:hover .menu-card { transform: rotateY(180deg); }
+        .card-front, .card-back { position: absolute; top: 0; left: 0; width: 100%; height: 100%; backface-visibility: hidden; border-radius: 12px; box-sizing: border-box; }
+        .card-front { background: var(--f-bg); padding: 1.8rem; border: 1px solid rgba(255,255,255,0.08); display: flex; flex-direction: column; justify-content: space-between; z-index: 2; transform: rotateY(0deg); }
+        .card-back { background-size: cover; background-position: center; transform: rotateY(180deg); border: 2px solid var(--gold); display: flex; align-items: flex-end; padding: 1.5rem; box-shadow: 0 10px 25px rgba(0,0,0,0.5); }
+        .card-back-title { color: #fff; font-weight: bold; font-size: 1.25rem; text-shadow: 0 2px 8px rgba(0,0,0,0.9); background: rgba(0,0,0,0.6); padding: 6px 14px; border-radius: 6px; border-left: 3px solid var(--gold); }
+        .card-header { display: flex; justify-content: space-between; align-items: flex-start; gap: 10px; margin-bottom: 8px; }
         .menu-card h3 { color: var(--gold); margin: 0; font-size: 1.35rem; font-weight: 600; }
-        .menu-tag { 
-            background: rgba(255, 253, 130, 0.1); 
-            color: var(--gold); 
-            font-size: 0.7rem; 
-            font-weight: bold; 
-            padding: 4px 10px; 
-            border-radius: 20px; 
-            white-space: nowrap;
-            text-transform: uppercase; 
-            letter-spacing: 0.5px; 
-        }
+        .menu-tag { background: rgba(255,253,130,0.1); color: var(--gold); font-size: 0.7rem; font-weight: bold; padding: 4px 10px; border-radius: 20px; white-space: nowrap; text-transform: uppercase; letter-spacing: 0.5px; }
         .menu-card p { color: #aaa; font-size: 0.9rem; line-height: 1.4; margin: 0 0 15px 0; }
-        .menu-specs { 
-            border-top: 1px solid rgba(255,255,255,0.06); 
-            padding-top: 12px; 
-            font-size: 0.85rem; 
-            display: flex;
-            flex-direction: column;
-            gap: 6px;
-        }
+        .menu-specs { border-top: 1px solid rgba(255,255,255,0.06); padding-top: 12px; font-size: 0.85rem; display: flex; flex-direction: column; gap: 6px; }
         .menu-specs div { color: #888; }
         .menu-specs strong { color: #eee; font-weight: 500; }
         
-        /* Dough Feature Styles */
         .dough-feature { background: #050505; border-top: 1px solid #222; border-bottom: 1px solid #222; display: flex; align-items: center; flex-wrap: wrap; gap: 40px; padding: 60px 8%; }
         .dough-text { flex: 1; min-width: 300px; }
         .dough-text h2 { text-align: left; margin-bottom: 20px; }
@@ -337,171 +306,82 @@
         .dough-text p { line-height: 1.8; color: #ccc; font-size: 1.1rem; }
         .dough-highlight { color: var(--gold); font-weight: bold; }
         .dough-image { flex: 1; min-width: 300px; text-align: center; }
-        .dough-image img { width: 100%; max-width: 500px; border-radius: 15px; box-shadow: 0 0 30px rgba(255, 253, 130, 0.1); }
+        .dough-image img { width: 100%; max-width: 500px; border-radius: 15px; box-shadow: 0 0 30px rgba(255,253,130,0.1); }
         
-        /* Premium Dietary Feature Box Styles */
-        .dietary-box {
-            background: #111;
-            border: 1px solid rgba(255,255,255,0.06);
-            border-radius: 15px;
-            padding: 3rem;
-            max-width: 900px;
-            margin: 0 auto;
-            box-shadow: 0 15px 40px rgba(0,0,0,0.5);
+        .dietary-box { background: #111; border: 1px solid rgba(255,255,255,0.06); border-radius: 15px; padding: 3rem; max-width: 900px; margin: 0 auto; box-shadow: 0 15px 40px rgba(0,0,0,0.5); }
+        .dietary-grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(280px, 1fr)); gap: 2.5rem; margin-top: 2rem; }
+        .dietary-item h3 { color: var(--gold); font-size: 1.25rem; margin: 0 0 10px 0; display: flex; align-items: center; gap: 8px; }
+        .dietary-item p { color: #ccc; font-size: 0.95rem; line-height: 1.6; margin: 0; }
+        .coeliac-warning { color: #888 !important; font-size: 0.8rem !important; display: block; margin-top: 8px; font-style: italic; }
+
+        /* Coverage / Service Area Section */
+        .coverage-section {
+            background: #080808;
+            border-top: 1px solid #222;
+            border-bottom: 1px solid #222;
+            padding: 60px 8%;
+            text-align: center;
         }
-        .dietary-grid {
+        .coverage-section h2 { font-size: clamp(1.8rem, 5vw, 2.2rem); margin-bottom: 0.5rem; }
+        .coverage-section h2::after { content: ''; display: block; width: 50px; height: 3px; background: var(--gold); margin: 10px auto 1.5rem; }
+        .coverage-section p { color: #aaa; max-width: 650px; margin: 0 auto 2rem; line-height: 1.6; font-size: 1rem; }
+        .coverage-list {
             display: grid;
-            grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
-            gap: 2.5rem;
-            margin-top: 2rem;
+            grid-template-columns: repeat(3, 1fr);
+            gap: 1rem;
+            max-width: 700px;
+            margin: 0 auto 1.5rem;
         }
-        .dietary-item h3 {
-            color: var(--gold);
-            font-size: 1.25rem;
-            margin: 0 0 10px 0;
+        .coverage-item {
+            background: var(--f-bg);
+            border: 1px solid rgba(255,255,255,0.06);
+            border-radius: 8px;
+            padding: 0.9rem 1rem;
+            font-size: 0.95rem;
+            font-weight: 600;
+            color: #eee;
             display: flex;
             align-items: center;
             gap: 8px;
         }
-        .dietary-item p {
-            color: #ccc;
-            font-size: 0.95rem;
-            line-height: 1.6;
-            margin: 0;
-        }
-        .coeliac-warning {
-            color: #888 !important;
-            font-size: 0.8rem !important;
-            display: block;
-            margin-top: 8px;
-            font-style: italic;
-        }
+        .coverage-item::before { content: '📍'; font-size: 0.9rem; }
+        .coverage-note { font-size: 0.85rem; color: #666; margin-top: 0.5rem; }
 
-        /* "How It Works" 3-Step Section Styles */
-        .steps-grid {
-            display: grid;
-            grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
-            gap: 2.2rem;
-            margin-top: 2rem;
-        }
-        .step-card {
-            background: var(--f-bg);
-            padding: 2.5rem 2rem;
-            border-radius: 12px;
-            border: 1px solid rgba(255,255,255,0.05);
-            position: relative;
-            overflow: hidden;
-        }
-        .step-number {
-            font-size: 4.5rem;
-            font-weight: 900;
-            color: rgba(255, 253, 130, 0.05);
-            position: absolute;
-            top: -0.5rem;
-            right: 0.8rem;
-            line-height: 1;
-        }
-        .step-card h3 {
-            color: var(--gold);
-            margin: 0 0 12px 0;
-            font-size: 1.3rem;
-            font-weight: 600;
-        }
-        .step-card p {
-            color: #aaa;
-            font-size: 0.95rem;
-            line-height: 1.6;
-            margin: 0;
-        }
+        .steps-grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(250px, 1fr)); gap: 2.2rem; margin-top: 2rem; }
+        .step-card { background: var(--f-bg); padding: 2.5rem 2rem; border-radius: 12px; border: 1px solid rgba(255,255,255,0.05); position: relative; overflow: hidden; }
+        .step-number { font-size: 4.5rem; font-weight: 900; color: rgba(255,253,130,0.05); position: absolute; top: -0.5rem; right: 0.8rem; line-height: 1; }
+        .step-card h3 { color: var(--gold); margin: 0 0 12px 0; font-size: 1.3rem; font-weight: 600; }
+        .step-card p { color: #aaa; font-size: 0.95rem; line-height: 1.6; margin: 0; }
 
-        /* Clean Interactive FAQ Accordion Styles */
-        .faq-accordion {
-            max-width: 750px;
-            margin: 0 auto;
-            display: flex;
-            flex-direction: column;
-            gap: 15px;
-        }
-        .faq-item {
-            background: var(--f-bg);
-            border: 1px solid rgba(255,255,255,0.05);
-            border-radius: 8px;
-            overflow: hidden;
-        }
-        .faq-item summary {
-            padding: 1.2rem;
-            font-weight: 600;
-            font-size: 1.05rem;
-            color: #fff;
-            cursor: pointer;
-            list-style: none;
-            display: flex;
-            justify-content: space-between;
-            align-items: center;
-            user-select: none;
-            transition: color 0.2s;
-        }
-        .faq-item summary:hover {
-            color: var(--gold);
-        }
-        .faq-item summary::-webkit-details-marker {
-            display: none;
-        }
-        .faq-item summary::after {
-            content: '＋';
-            color: var(--gold);
-            font-weight: bold;
-            font-size: 1.1rem;
-            transition: transform 0.3s;
-        }
-        .faq-item[open] summary::after {
-            content: '－';
-        }
-        .faq-content {
-            padding: 0 1.2rem 1.2rem 1.2rem;
-            color: #aaa;
-            font-size: 0.95rem;
-            line-height: 1.6;
-            border-top: 1px solid rgba(255,255,255,0.03);
-            padding-top: 12px;
-        }
+        .faq-accordion { max-width: 750px; margin: 0 auto; display: flex; flex-direction: column; gap: 15px; }
+        .faq-item { background: var(--f-bg); border: 1px solid rgba(255,255,255,0.05); border-radius: 8px; overflow: hidden; }
+        .faq-item summary { padding: 1.2rem; font-weight: 600; font-size: 1.05rem; color: #fff; cursor: pointer; list-style: none; display: flex; justify-content: space-between; align-items: center; user-select: none; transition: color 0.2s; }
+        .faq-item summary:hover { color: var(--gold); }
+        .faq-item summary::-webkit-details-marker { display: none; }
+        .faq-item summary::after { content: '＋'; color: var(--gold); font-weight: bold; font-size: 1.1rem; transition: transform 0.3s; }
+        .faq-item[open] summary::after { content: '－'; }
+        .faq-content { padding: 0 1.2rem 1.2rem 1.2rem; color: #aaa; font-size: 0.95rem; line-height: 1.6; border-top: 1px solid rgba(255,255,255,0.03); padding-top: 12px; }
 
-        /* WhatsApp Direct Integration Styles */
-        .whatsapp-prompt {
-            text-align: center;
-            margin-top: 20px;
-            font-size: 0.95rem;
-            color: #ccc;
-        }
-        .whatsapp-prompt a {
-            color: var(--whatsapp);
-            font-weight: bold;
-            text-decoration: underline;
-        }
-        .whatsapp-prompt a:hover {
-            color: #fff;
-        }
+        .whatsapp-prompt { text-align: center; margin-top: 20px; font-size: 0.95rem; color: #ccc; }
+        .whatsapp-prompt a { color: var(--whatsapp); font-weight: bold; text-decoration: underline; }
+        .whatsapp-prompt a:hover { color: #fff; }
 
-        /* Gallery Styles */
         .gallery { display: grid; grid-template-columns: repeat(2, 1fr); gap: 10px; }
         @media (min-width: 768px) { .gallery { grid-template-columns: repeat(4, 1fr); } }
-        .gallery img { width: 100%; height: 250px; object-fit: cover; border-radius: 8px; transition: 0.3s;}
-        .gallery img:hover { transform: scale(1.05);}
+        .gallery img { width: 100%; height: 250px; object-fit: cover; border-radius: 8px; transition: 0.3s; }
+        .gallery img:hover { transform: scale(1.05); }
         
-        /* Testimonials Styles */
         .testimonials { background: #0a0a0a; display: grid; grid-template-columns: repeat(auto-fit, minmax(280px, 1fr)); gap: 2rem; }
         .testimonial-card { background: #111; padding: 2rem; border-radius: 15px; border-left: 4px solid var(--gold); position: relative; }
         .testimonial-card p { font-style: italic; font-size: 0.95rem; line-height: 1.6; color: #ccc; }
         .testimonial-card h4 { margin-top: 15px; color: var(--gold); font-size: 1rem; }
         .stars { color: var(--gold); margin-bottom: 10px; font-size: 0.8rem; }
         
-        /* Form & Hire Styles */
         #hire { max-width: 600px; margin: 0 auto; }
         form { background: var(--f-bg); padding: 2rem; border-radius: 10px; display: flex; flex-direction: column; gap: 1.2rem; }
         input, select, textarea { padding: 12px; background: rgba(255,255,255,0.08); border: 1px solid rgba(255,255,255,0.15); border-radius: 6px; color: #fff; width: 100%; box-sizing: border-box; font-size: 16px; }
         .submit { background: var(--gold); color: #000; padding: 16px; border: none; border-radius: 6px; font-weight: bold; font-size: 1.1rem; cursor: pointer; }
         
-        /* Footer Styles */
         footer { background: #080808; text-align: center; padding: 40px 5%; border-top: 1px solid rgba(255,255,255,0.1); }
         .social { display: flex; justify-content: center; gap: 25px; margin-bottom: 20px; } .social svg { width: 30px; height: 30px; fill: #fff; }
         .contact p { margin: 8px 0; } .contact a { color: var(--gold); font-weight: bold; }
@@ -513,16 +393,12 @@
     
     <header>
         <div class="logo"><span>Marti</span>_nPizza</div>
-        
-        <!-- Interactive Glowing Hamburger Button Trigger -->
         <button class="hamburger" onclick="toggleMenu()" aria-label="Toggle Menu">
             <span class="bar"></span>
             <span class="bar"></span>
             <span class="bar"></span>
         </button>
-        
-        <!-- Re-Ordered Action-First Mobile Menu Panel Container -->
-        <nav class="nav-menu" id="navMenu">
+        <nav class="nav-menu" id="navMenu" aria-label="Main navigation">
             <ul>
                 <li><a href="#hire" onclick="toggleMenu()">Hire Us</a></li>
                 <li><a href="#menu" onclick="toggleMenu()">Menu</a></li>
@@ -533,7 +409,6 @@
         </nav>
     </header>
 
-    <!-- Background Hero Section -->
     <section id="home">
         <video autoplay loop muted playsinline class="bg-video">
             <source src="assets/videos/trailerbackground.mp4" type="video/mp4">
@@ -541,12 +416,11 @@
         <div class="hero-overlay"></div>
         <div class="hero-content">
             <h1>A <span>Slice</span> of Heaven.</h1>
-            <p>Authentic Neapolitan Style Pizza Catering</p>
-            <a href="#hire" class="btn">Check Availability & Pricing</a>
+            <p class="hero-subtitle">Authentic Neapolitan Pizza Catering — Edinburgh, Glasgow &amp; Across Scotland</p>
+            <a href="#hire" class="btn">Check Availability &amp; Pricing</a>
         </div>
     </section>
 
-    <!-- Brand Trust Checkmarks Bar -->
     <div class="trust-bar">
         <div class="trust-item"><span>✓</span> Authentic 48-Hour Slow Ferment</div>
         <div class="trust-item"><span>✓</span> Live Mobile Trailer Catering</div>
@@ -561,12 +435,10 @@
         <div class="stat"><h3>Scotland</h3><p>Nationwide</p></div>
     </div>
 
-    <!-- Interactive 3D Flip Menu Section with Verified Image Mapping & App-Style Mobile Fallback -->
     <section id="menu">
         <h2>Sample Menu</h2>
         <div class="menu-grid">
             
-            <!-- Card 1: Margherita -->
             <div class="menu-card-container">
                 <div class="menu-card">
                     <div class="card-front">
@@ -576,8 +448,8 @@
                         </div>
                         <p>The timeless Neapolitan standard, perfectly balanced and full of flavor.</p>
                         <div class="menu-specs">
-                            <div>Base: <strong>San Marzano Tomatoes & Fior di Latte</strong></div>
-                            <div>Finish: <strong>Extra Virgin Olive Oil & Fresh Basil</strong></div>
+                            <div>Base: <strong>San Marzano Tomatoes &amp; Fior di Latte</strong></div>
+                            <div>Finish: <strong>Extra Virgin Olive Oil &amp; Fresh Basil</strong></div>
                         </div>
                     </div>
                     <div class="card-back" style="background-image: linear-gradient(to top, rgba(0,0,0,0.7) 15%, rgba(0,0,0,0.1) 100%), url('margh.jpg');">
@@ -586,7 +458,6 @@
                 </div>
             </div>
 
-            <!-- Card 2: Pepperoni -->
             <div class="menu-card-container">
                 <div class="menu-card">
                     <div class="card-front">
@@ -596,7 +467,7 @@
                         </div>
                         <p>A traditional favorite crowded with premium, savory meat cut to curl crisp.</p>
                         <div class="menu-specs">
-                            <div>Base: <strong>San Marzano Tomatoes & Fior di Latte</strong></div>
+                            <div>Base: <strong>San Marzano Tomatoes &amp; Fior di Latte</strong></div>
                             <div>Toppings: <strong>Premium Spicy Italian Pepperoni</strong></div>
                         </div>
                     </div>
@@ -606,7 +477,6 @@
                 </div>
             </div>
 
-            <!-- Card 3: Spicy Scotsman -->
             <div class="menu-card-container">
                 <div class="menu-card">
                     <div class="card-front">
@@ -616,8 +486,8 @@
                         </div>
                         <p>Our unique signature creation bringing bold, traditional local flavor with a sharp fiery kick.</p>
                         <div class="menu-specs">
-                            <div>Base: <strong>San Marzano Tomatoes & Fior di Latte</strong></div>
-                            <div>Toppings: <strong>Premium Haggis & Sliced Jalapeños</strong></div>
+                            <div>Base: <strong>San Marzano Tomatoes &amp; Fior di Latte</strong></div>
+                            <div>Toppings: <strong>Premium Haggis &amp; Sliced Jalapeños</strong></div>
                             <div>Finish: <strong>Sweet Hot Honey Drizzle</strong></div>
                         </div>
                     </div>
@@ -627,7 +497,6 @@
                 </div>
             </div>
 
-            <!-- Card 4: Pizza Bianca -->
             <div class="menu-card-container">
                 <div class="menu-card">
                     <div class="card-front">
@@ -637,8 +506,8 @@
                         </div>
                         <p>An authentic white pizza focusing on aromatics and rich, creamy cheese profiles.</p>
                         <div class="menu-specs">
-                            <div>Base: <strong>EV Olive Oil & Chopped Fresh Garlic</strong></div>
-                            <div>Toppings: <strong>Creamy Melted Mozzarella & Herbs</strong></div>
+                            <div>Base: <strong>EV Olive Oil &amp; Chopped Fresh Garlic</strong></div>
+                            <div>Toppings: <strong>Creamy Melted Mozzarella &amp; Herbs</strong></div>
                         </div>
                     </div>
                     <div class="card-back" style="background-image: linear-gradient(to top, rgba(0,0,0,0.7) 15%, rgba(0,0,0,0.1) 100%), url('pizza-6.jpg');">
@@ -647,57 +516,54 @@
                 </div>
             </div>
 
-            <!-- Card 5: Ham & Mushroom -->
             <div class="menu-card-container">
                 <div class="menu-card">
                     <div class="card-front">
                         <div class="card-header">
-                            <h3>Ham & Mushroom</h3>
+                            <h3>Ham &amp; Mushroom</h3>
                             <span class="menu-tag">🍄 Traditional</span>
                         </div>
                         <p>A comforting, classic combo combining rich savory depth with earthy finishes.</p>
                         <div class="menu-specs">
-                            <div>Base: <strong>San Marzano Tomatoes & Fior di Latte</strong></div>
-                            <div>Toppings: <strong>Smoked Ham & Earthy Sliced Mushrooms</strong></div>
+                            <div>Base: <strong>San Marzano Tomatoes &amp; Fior di Latte</strong></div>
+                            <div>Toppings: <strong>Smoked Ham &amp; Earthy Sliced Mushrooms</strong></div>
                         </div>
                     </div>
                     <div class="card-back" style="background-image: linear-gradient(to top, rgba(0,0,0,0.7) 15%, rgba(0,0,0,0.1) 100%), url('ham.jpg');">
-                        <div class="card-back-title">Ham & Mushroom</div>
+                        <div class="card-back-title">Ham &amp; Mushroom</div>
                     </div>
                 </div>
             </div>
 
-            <!-- Card 6: Chicken & Onion -->
             <div class="menu-card-container">
                 <div class="menu-card">
                     <div class="card-front">
                         <div class="card-header">
-                            <h3>Chicken & Onion</h3>
+                            <h3>Chicken &amp; Onion</h3>
                             <span class="menu-tag">🍗 Savoury</span>
                         </div>
                         <p>Perfectly balanced texture and heat combining clean meats with a sweet bite.</p>
                         <div class="menu-specs">
-                            <div>Base: <strong>San Marzano Tomatoes & Fior di Latte</strong></div>
-                            <div>Toppings: <strong>Spicy Shredded Chicken & Red Onions</strong></div>
+                            <div>Base: <strong>San Marzano Tomatoes &amp; Fior di Latte</strong></div>
+                            <div>Toppings: <strong>Spicy Shredded Chicken &amp; Red Onions</strong></div>
                         </div>
                     </div>
                     <div class="card-back" style="background-image: linear-gradient(to top, rgba(0,0,0,0.7) 15%, rgba(0,0,0,0.1) 100%), url('chicken.jpg');">
-                        <div class="card-back-title">Chicken & Onion</div>
+                        <div class="card-back-title">Chicken &amp; Onion</div>
                     </div>
                 </div>
             </div>
 
-            <!-- Card 7: Pepperoni Sting -->
             <div class="menu-card-container">
                 <div class="menu-card">
                     <div class="card-front">
                         <div class="card-header">
                             <h3>Pepperoni Sting</h3>
-                            <span class="menu-tag">🐝 Sweet & Spicy</span>
+                            <span class="menu-tag">🐝 Sweet &amp; Spicy</span>
                         </div>
                         <p>The perfect profile crossover where rich smoky salts collide with sweet heat.</p>
                         <div class="menu-specs">
-                            <div>Base: <strong>San Marzano Tomatoes & Fior di Latte</strong></div>
+                            <div>Base: <strong>San Marzano Tomatoes &amp; Fior di Latte</strong></div>
                             <div>Toppings: <strong>Spicy Italian Pepperoni</strong></div>
                             <div>Finish: <strong>Artisanal Hot Honey Drizzle</strong></div>
                         </div>
@@ -708,22 +574,21 @@
                 </div>
             </div>
 
-            <!-- Card 8: BBQ Chicken & Sweetcorn -->
             <div class="menu-card-container">
                 <div class="menu-card">
                     <div class="card-front">
                         <div class="card-header">
-                            <h3>BBQ Chicken & Sweetcorn</h3>
+                            <h3>BBQ Chicken &amp; Sweetcorn</h3>
                             <span class="menu-tag">🍕 Smoky Mix</span>
                         </div>
                         <p>A deep, sweet backyard profile tailored for rich, satisfying texturing.</p>
                         <div class="menu-specs">
-                            <div>Base: <strong>Smoky BBQ & San Marzano Tomato Hybrid</strong></div>
-                            <div>Toppings: <strong>Spicy Chicken & Crisp Sweetcorn</strong></div>
+                            <div>Base: <strong>Smoky BBQ &amp; San Marzano Tomato Hybrid</strong></div>
+                            <div>Toppings: <strong>Spicy Chicken &amp; Crisp Sweetcorn</strong></div>
                         </div>
                     </div>
                     <div class="card-back" style="background-image: linear-gradient(to top, rgba(0,0,0,0.7) 15%, rgba(0,0,0,0.1) 100%), url('bbq.jpg');">
-                        <div class="card-back-title">BBQ Chicken & Sweetcorn</div>
+                        <div class="card-back-title">BBQ Chicken &amp; Sweetcorn</div>
                     </div>
                 </div>
             </div>
@@ -731,7 +596,6 @@
         </div>
     </section>
 
-    <!-- Process Section -->
     <section id="process" class="dough-feature">
         <div class="dough-text">
             <h2>The Secret is in the Dough</h2>
@@ -740,14 +604,13 @@
             <p>Combined with San Marzano tomatoes and creamy Fior di Latte, it's the authentic taste of Naples, right here in Scotland.</p>
         </div>
         <div class="dough-image">
-            <img src="pizza-2.jpg" alt="Fermented Dough Crust">
+            <img src="pizza-2.jpg" alt="48-hour fermented Neapolitan pizza dough with leopard spot char crust">
         </div>
     </section>
 
-    <!-- Premium Dietary & Vegan Callout Section -->
     <section id="dietary-options" style="background: #080808; padding: 60px 8%; border-bottom: 1px solid #222;">
         <div class="dietary-box">
-            <h2 style="margin-top: 0;">Dietary & Vegan Requirements</h2>
+            <h2 style="margin-top: 0;">Dietary &amp; Vegan Requirements</h2>
             <p style="color: #aaa; font-size: 1.05rem; line-height: 1.6; margin-bottom: 1.8rem;">We believe absolutely nobody should have to miss out on exceptional pizza at your event. We proudly offer tailored options to ensure every single one of your guests is safely and deliciously catered for.</p>
             <div class="dietary-grid">
                 <div class="dietary-item">
@@ -762,26 +625,39 @@
         </div>
     </section>
 
-    <!-- Gallery Section -->
+    <!-- Service Area Section -->
+    <div class="coverage-section">
+        <h2>Neapolitan Pizza Catering Across Scotland</h2>
+        <p>Based in Bathgate, West Lothian, we bring our mobile pizza trailer to weddings, corporate events, and private parties throughout central Scotland and beyond.</p>
+        <div class="coverage-list">
+            <div class="coverage-item">Edinburgh</div>
+            <div class="coverage-item">Glasgow</div>
+            <div class="coverage-item">West Lothian</div>
+            <div class="coverage-item">Falkirk</div>
+            <div class="coverage-item">Stirling</div>
+            <div class="coverage-item">Central Belt</div>
+        </div>
+        <p class="coverage-note">Travelling further? Get in touch — we cater nationwide across Scotland for larger bookings.</p>
+    </div>
+
     <section id="gallery">
         <h2>Gallery</h2>
         <div class="gallery">
-            <img src="hero-trailer.jpg" alt="Trailer">
-            <img src="setup-1.jpg" alt="Setup 1">
-            <img src="setup-2.jpg" alt="Setup 2">
-            <img src="setup-3.jpg" alt="Setup 3">
-            <img src="pizza-1.jpg" alt="Pizza 1">
-            <img src="pizza-2.jpg" alt="Pizza 2">
-            <img src="pizza-3.jpg" alt="Pizza 3">
-            <img src="pizza-4.jpg" alt="Pizza 4">
-            <img src="pizza-5.jpg" alt="Pizza 5">
-            <img src="pizza-6.jpg" alt="Pizza 6">
-            <img src="pizza-7.jpg" alt="Pizza 7">
-            <img src="pizza-8.jpg" alt="Pizza 8">
+            <img src="hero-trailer.jpg" alt="Marti_nPizza mobile pizza trailer at a Scottish event">
+            <img src="setup-1.jpg" alt="Pizza trailer setup at outdoor event in Scotland">
+            <img src="setup-2.jpg" alt="Neapolitan pizza catering setup">
+            <img src="setup-3.jpg" alt="Mobile pizza van setup for wedding catering Scotland">
+            <img src="pizza-1.jpg" alt="Authentic Neapolitan pizza with leopard spot crust">
+            <img src="pizza-2.jpg" alt="48-hour fermented pizza dough with charred crust">
+            <img src="pizza-3.jpg" alt="Freshly baked Neapolitan pizza from 500 degree stone oven">
+            <img src="pizza-4.jpg" alt="San Marzano tomato pizza with Fior di Latte">
+            <img src="pizza-5.jpg" alt="Pizza catering for events across Edinburgh and Glasgow">
+            <img src="pizza-6.jpg" alt="Pizza Bianca white pizza with garlic and mozzarella">
+            <img src="pizza-7.jpg" alt="Pepperoni pizza cooked in mobile pizza trailer">
+            <img src="pizza-8.jpg" alt="Spicy Scotsman pizza with haggis and jalapeno">
         </div>
     </section>
 
-    <!-- Testimonials Section -->
     <section id="testimonials">
         <h2>What People Say</h2>
         <div class="testimonials">
@@ -803,7 +679,6 @@
         </div>
     </section>
 
-    <!-- "How It Works" 3-Step Section -->
     <section id="how-it-works">
         <h2>How It Works</h2>
         <div class="steps-grid">
@@ -825,30 +700,32 @@
         </div>
     </section>
 
-    <!-- Objection-Buster FAQ Section -->
     <section id="faq" style="background: #050505; border-top: 1px solid #222; border-bottom: 1px solid #222;">
         <h2>Frequently Asked Questions</h2>
         <div class="faq-accordion">
             <details class="faq-item">
-                <summary>What areas across Scotland do you cover?</summary>
-                <div class="faq-content">We are proudly based in Bathgate, West Lothian, and routinely cater events across West Lothian, Edinburgh, Glasgow, Falkirk, and the Central Belt. Depending on the size of your booking, we can also provide nationwide catering across Scotland.</div>
+                <summary>What areas across Scotland do you cover for pizza catering?</summary>
+                <div class="faq-content">We are proudly based in Bathgate, West Lothian, and routinely cater events across West Lothian, Edinburgh, Glasgow, Falkirk, Stirling, and the Central Belt. Depending on the size of your booking, we can also provide nationwide catering across Scotland.</div>
             </details>
             <details class="faq-item">
                 <summary>How much space does your mobile pizza trailer require?</summary>
-                <div class="faq-content">Our custom professional pizza trailer requires flat, accessible ground surface area to set up safely and park. When you send over your event location details, we cross-verify the vehicle positioning tracking metrics to make sure logistics roll perfectly on the day.</div>
+                <div class="faq-content">Our custom professional pizza trailer requires flat, accessible ground surface area to set up safely and park. When you send over your event location details, we verify the vehicle positioning to make sure logistics roll perfectly on the day.</div>
             </details>
             <details class="faq-item">
-                <summary>Can you handle vegan options and food allergies?</summary>
+                <summary>Do you cater for vegan guests and food allergies?</summary>
                 <div class="faq-content">Yes! We stock premium vegan melting cheeses for dairy-free or plant-based requirements. We also provide specialty alternative bases for guests with gluten intolerances. However, because our trailer environment features open flour handling, it is not suitable for severe Coeliac profiles.</div>
             </details>
             <details class="faq-item">
-                <summary>What happens if the traditional Scottish weather turns bad?</summary>
-                <div class="faq-content">Don't worry! Our catering trailer is a heavy-duty, completely self-contained, weather-protected mobile kitchen ecosystem. We operate perfectly in the rain and wind, keeping our stone ovens blazing at 500°C so your event timeline goes completely undisturbed.</div>
+                <summary>What happens if the Scottish weather turns bad?</summary>
+                <div class="faq-content">Don't worry! Our catering trailer is a heavy-duty, completely self-contained, weather-protected mobile kitchen. We operate perfectly in the rain and wind, keeping our stone ovens blazing at 500°C so your event timeline goes completely undisturbed.</div>
+            </details>
+            <details class="faq-item">
+                <summary>How many guests can you cater for?</summary>
+                <div class="faq-content">We comfortably cater for events from 10 up to 200 guests. Whether it's an intimate garden party or a large wedding reception, our setup scales to suit your numbers. Just let us know your expected guest count when you get in touch.</div>
             </details>
         </div>
     </section>
 
-    <!-- Booking Form Section -->
     <section id="hire">
         <h2>Hire Us</h2>
         <form action="https://formspree.io/f/mdawybko" method="POST">
@@ -857,7 +734,7 @@
             <input type="tel" name="phone" placeholder="Phone Number" required>
             <input type="date" name="event_date" required>
             <input type="number" name="guests" placeholder="Expected Guests" required>
-            <textarea name="message" placeholder="Event Location & Details..." rows="4"></textarea>
+            <textarea name="message" placeholder="Event Location &amp; Details..." rows="4"></textarea>
             <button type="submit" class="submit">Submit Inquiry</button>
         </form>
         <div class="whatsapp-prompt">
@@ -867,22 +744,20 @@
 
     <footer>
         <div class="social">
-            <a href="https://www.facebook.com/Martinpizzza/" target="_blank"><svg viewBox="0 0 24 24"><path d="M22.675 0h-21.35c-.732 0-1.325.593-1.325 1.325v21.351c0 .731.593 1.324 1.325 1.324h11.495v-9.294h-3.128v-3.622h3.128v-2.671c0-3.1 1.893-4.788 4.659-4.788 1.325 0 2.463.099 2.795.143v3.24l-1.918.001c-1.504 0-1.795.715-1.795 1.763v2.313h3.587l-.467 3.622h-3.12v9.293h6.116c.73 0 1.323-.593 1.323-1.325v-21.35c0-.732-.593-1.325-1.323-1.325z"/></svg></a>
-            <a href="https://www.instagram.com/marti_npizza" target="_blank"><svg viewBox="0 0 24 24"><path d="M12 2.163c3.204 0 3.584.012 4.85.07 3.252.148 4.771 1.691 4.919 4.919.058 1.265.069 1.645.069 4.849 0 3.205-.012 3.584-.069 4.849-.149 3.225-1.664 4.771-4.919 4.919-1.266.058-1.644.07-4.85.07-3.204 0-3.584-.012-4.849-.07-3.26-.149-4.771-1.699-4.919-4.92-.058-1.265-.07-1.644-.07-4.849 0-3.204.013-3.583.07-4.849.149-3.227 1.664-4.771 4.919-4.919 1.266-.057 1.645-.069 4.849-.069zm0-2.163c-3.259 0-3.667.014-4.947.072-4.358.2-6.78 2.618-6.98 6.98-.059 1.281-.073 1.689-.073 4.948 0 3.259.014 3.668.072 4.948.2 4.358 2.618 6.78 6.98 6.98 1.281.058 1.689.072 4.948.072 3.259 0 3.668-.014 4.948-.072 4.354-.2 6.782-2.618 6.979-6.98.059-1.28.073-1.689.073-4.948 0-3.259-.014-3.667-.072-4.947-.196-4.354-2.617-6.78-6.979-6.98-1.281-.059-1.69-.073-4.949-.073zm0 5.838c-3.403 0-6.162 2.759-6.162 6.162s2.759 6.163 6.162 6.163 6.162-2.759 6.162-6.163-2.759-6.162-6.162-6.162zm0 10.162c-2.209 0-4-1.79-4-4 0-2.209 1.791-4 4-4s4 1.791 4 4c0 2.21-1.791 4-4 4zm6.406-11.845c-.796 0-1.441.645-1.441 1.44s.645 1.44 1.441 1.44c.795 0 1.439-.645 1.439-1.44s-.644-1.44-1.439-1.44z"/></svg></a>
-            <a href="https://www.tiktok.com/@marti_npizza" target="_blank"><svg viewBox="0 0 24 24"><path d="M12.525.02c1.31-.02 2.61-.01 3.91-.02.08 1.53.63 3.09 1.75 4.17 1.12 1.11 2.7 1.62 4.24 1.79v4.03c-1.44-.05-2.89-.35-4.2 Til-.97-.57-.26-1.1-.59-1.62-.93-.01 2.92.01 5.84-.02 8.75-.08 1.4-.54 2.79-1.35 3.94-1.31 1.92-3.58 3.17-5.91 3.21-1.43.08-2.86-.31-4.08-1.03-2.02-1.19-3.44-3.37-3.59-5.71-.29-3.37 2.13-6.48 5.4-7.2 1.19-.27 2.48-.12 3.57.44V14.2c-.44-.47-1.01-.81-1.65-.98-1.58-.39-3.41.25-4.24 1.74-.45.82-.55 1.83-.34 2.73.14.83.52 1.62 1.14 2.16.81.72 1.9 1.08 2.97 1.01 1.25-.07 2.42-.68 3.12-1.72.37-.53.55-1.14.59-1.78.01-4.08 0-8.16.01-12.23.01-.01.01-.02.01-.03z"/></svg></a>
+            <a href="https://www.facebook.com/Martinpizzza/" target="_blank" aria-label="Facebook"><svg viewBox="0 0 24 24"><path d="M22.675 0h-21.35c-.732 0-1.325.593-1.325 1.325v21.351c0 .731.593 1.324 1.325 1.324h11.495v-9.294h-3.128v-3.622h3.128v-2.671c0-3.1 1.893-4.788 4.659-4.788 1.325 0 2.463.099 2.795.143v3.24l-1.918.001c-1.504 0-1.795.715-1.795 1.763v2.313h3.587l-.467 3.622h-3.12v9.293h6.116c.73 0 1.323-.593 1.323-1.325v-21.35c0-.732-.593-1.325-1.323-1.325z"/></svg></a>
+            <a href="https://www.instagram.com/marti_npizza" target="_blank" aria-label="Instagram"><svg viewBox="0 0 24 24"><path d="M12 2.163c3.204 0 3.584.012 4.85.07 3.252.148 4.771 1.691 4.919 4.919.058 1.265.069 1.645.069 4.849 0 3.205-.012 3.584-.069 4.849-.149 3.225-1.664 4.771-4.919 4.919-1.266.058-1.644.07-4.85.07-3.204 0-3.584-.012-4.849-.07-3.26-.149-4.771-1.699-4.919-4.92-.058-1.265-.07-1.644-.07-4.849 0-3.204.013-3.583.07-4.849.149-3.227 1.664-4.771 4.919-4.919 1.266-.057 1.645-.069 4.849-.069zm0-2.163c-3.259 0-3.667.014-4.947.072-4.358.2-6.78 2.618-6.98 6.98-.059 1.281-.073 1.689-.073 4.948 0 3.259.014 3.668.072 4.948.2 4.358 2.618 6.78 6.98 6.98 1.281.058 1.689.072 4.948.072 3.259 0 3.668-.014 4.948-.072 4.354-.2 6.782-2.618 6.979-6.98.059-1.28.073-1.689.073-4.948 0-3.259-.014-3.667-.072-4.947-.196-4.354-2.617-6.78-6.979-6.98-1.281-.059-1.69-.073-4.949-.073zm0 5.838c-3.403 0-6.162 2.759-6.162 6.162s2.759 6.163 6.162 6.163 6.162-2.759 6.162-6.163-2.759-6.162-6.162-6.162zm0 10.162c-2.209 0-4-1.79-4-4 0-2.209 1.791-4 4-4s4 1.791 4 4c0 2.21-1.791 4-4 4zm6.406-11.845c-.796 0-1.441.645-1.441 1.44s.645 1.44 1.441 1.44c.795 0 1.439-.645 1.439-1.44s-.644-1.44-1.439-1.44z"/></svg></a>
+            <a href="https://www.tiktok.com/@marti_npizza" target="_blank" aria-label="TikTok"><svg viewBox="0 0 24 24"><path d="M12.525.02c1.31-.02 2.61-.01 3.91-.02.08 1.53.63 3.09 1.75 4.17 1.12 1.11 2.7 1.62 4.24 1.79v4.03c-1.44-.05-2.89-.35-4.2-.97-.57-.26-1.1-.59-1.62-.93-.01 2.92.01 5.84-.02 8.75-.08 1.4-.54 2.79-1.35 3.94-1.31 1.92-3.58 3.17-5.91 3.21-1.43.08-2.86-.31-4.08-1.03-2.02-1.19-3.44-3.37-3.59-5.71-.29-3.37 2.13-6.48 5.4-7.2 1.19-.27 2.48-.12 3.57.44V14.2c-.44-.47-1.01-.81-1.65-.98-1.58-.39-3.41.25-4.24 1.74-.45.82-.55 1.83-.34 2.73.14.83.52 1.62 1.14 2.16.81.72 1.9 1.08 2.97 1.01 1.25-.07 2.42-.68 3.12-1.72.37-.53.55-1.14.59-1.78.01-4.08 0-8.16.01-12.23.01-.01.01-.02.01-.03z"/></svg></a>
         </div>
         <div class="contact">
             <p><a href="mailto:info@martinpizza.co.uk">info@martinpizza.co.uk</a> | 07846547293 | <a href="https://wa.me/447909169944" target="_blank" class="wa-footer-link">WhatsApp</a></p>
         </div>
-        <!-- Legal Privacy Guardrail Line -->
         <p style="font-size: 0.8rem; color: #666; max-width: 600px; margin: 15px auto; line-height: 1.4;">
             <strong>Privacy Notice:</strong> We use zero tracking cookies on this site. Any personal details submitted via our enquiry form are securely processed via Formspree solely to manage your catering booking and are never shared.
         </p>
         <p>&copy; 2026 Marti_nPizza. All rights reserved.</p>
-        <u><p><a href="#home">Back to Top</a></p></u>
+        <p><a href="#home" style="text-decoration: underline;">Back to Top</a></p>
     </footer>
     
-    <!-- Micro JavaScript Layout Engine for Drawer Toggle -->
     <script>
         function toggleMenu() {
             document.querySelector('.hamburger').classList.toggle('active');
